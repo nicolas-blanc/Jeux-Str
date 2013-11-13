@@ -1,0 +1,15 @@
+cool link :: http://ithaca.arpinum.org/2010/10/14/fun-with-netrc.html
+
+creer .netrc en HOMEDIR
+
+puis ajouter cela :
+
+machine github.com
+login YOUR_NAME_HERE
+password DONT_TELL
+
+enfin : dans le console
+chmod 600 ~/.netrc
+cd where_you_keep_your_code
+perl -i.bak -ple 's{git\@github\.com:}{https://github.com/}' */.git/config
+perl -i.bak -ple 's{username\@}{}' */.git/config
