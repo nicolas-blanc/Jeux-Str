@@ -9,19 +9,19 @@ CND_DISTDIR=dist
 # Debug configuration
 CND_PLATFORM_Debug=GNU-Linux-x86
 CND_ARTIFACT_DIR_Debug=dist/Debug/GNU-Linux-x86
-CND_ARTIFACT_NAME_Debug=nb-jeux-str
-CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux-x86/nb-jeux-str
+CND_ARTIFACT_NAME_Debug=jeux-str
+CND_ARTIFACT_PATH_Debug=dist/Debug/GNU-Linux-x86/jeux-str
 CND_PACKAGE_DIR_Debug=dist/Debug/GNU-Linux-x86/package
-CND_PACKAGE_NAME_Debug=nb-jeux-str.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux-x86/package/nb-jeux-str.tar
+CND_PACKAGE_NAME_Debug=jeux-str.tar
+CND_PACKAGE_PATH_Debug=dist/Debug/GNU-Linux-x86/package/jeux-str.tar
 # Release configuration
 CND_PLATFORM_Release=GNU-Linux-x86
 CND_ARTIFACT_DIR_Release=dist/Release/GNU-Linux-x86
-CND_ARTIFACT_NAME_Release=nb-jeux-str
-CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux-x86/nb-jeux-str
+CND_ARTIFACT_NAME_Release=jeux-str
+CND_ARTIFACT_PATH_Release=dist/Release/GNU-Linux-x86/jeux-str
 CND_PACKAGE_DIR_Release=dist/Release/GNU-Linux-x86/package
-CND_PACKAGE_NAME_Release=nb-jeux-str.tar
-CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux-x86/package/nb-jeux-str.tar
+CND_PACKAGE_NAME_Release=jeux-str.tar
+CND_PACKAGE_PATH_Release=dist/Release/GNU-Linux-x86/package/jeux-str.tar
 #
 # include compiler specific variables
 #

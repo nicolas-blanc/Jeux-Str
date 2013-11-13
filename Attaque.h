@@ -16,5 +16,6 @@ private:
 };
 
 
+// bouh !!
 #endif	/* ATTAQUE_H */
 
