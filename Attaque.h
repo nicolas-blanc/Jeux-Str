@@ -11,7 +11,7 @@ public:
 
 private:
     float m_Degat;
-    int m_Portee; //comment ca va marcher ????? est ce un cercle ou ..
+    int m_Portee;
     int m_PointAction;
 };
 
