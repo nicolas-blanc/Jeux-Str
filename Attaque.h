@@ -6,7 +6,7 @@ using namespace std;
 
 class Attaque {
 public:
-    Attaque(float degat = 0.0 , int portee = 0 , int pointaction = 0);
+    Attaque(int degat = 0 , int portee = 0 , int ptAction = 0);
     void Attaquer();// a completer ...
 
 private:
