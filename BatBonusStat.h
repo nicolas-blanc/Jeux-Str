@@ -6,7 +6,7 @@ class BatBonusStat
 {
     public:
         BatBonusStat();
-        inline int GetBonus() { return m_Bonus }
+        inline int GetBonus() { return m_Bonus; }
         inline void SetBonus() { m_Bonus = this->randomBonus();}
         inline int GetNbTours() { return m_NbTours; }
         inline void SetNbTours(int nbTours) { m_NbTours = nbTours; }
@@ -19,7 +19,7 @@ class BatBonusStat
         int modifPopulation();
         // ...
 
-        // On appelle la modifiaction a chaque fois que l'on fais appel a la caractéristique, on test dans cette fonction si le bonus correspond,
+        // On appelle la modifiaction a chaque fois que l'on fais appel a la caractï¿½ristique, on test dans cette fonction si le bonus correspond,
             // et si il correspond, on a ajoute le bonus en fonction de nbTours
 
         int randomBonus();

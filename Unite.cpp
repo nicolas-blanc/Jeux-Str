@@ -1,4 +1,4 @@
-#include "../include/Unite.h"
+#include "Unite.h"
 #include "Case.h"
 
 Unite::Unite(unsigned int mvt, unsigned int ct, unsigned int pop, unsigned int vie, AttaqueDeBase atk, Case c)

@@ -1,21 +1,21 @@
 #ifndef ATTAQUE_H
 #define	ATTAQUE_H
+
 #include<iostream>
 #include<string>
+
 using namespace std;
 
 class Attaque {
 public:
-    Attaque(int degat = 0 , int portee = 0 , int ptAction = 0);
+    Attaque(int portee, int degat = 1, int ptAction = 1);
     void Attaquer();// a completer ...
 
 private:
-    float m_Degat;
+    int m_Degat;
     int m_Portee;
-    int m_PointAction;
+    int m_PtAction;
 };
 
-
-// bouh !!
 #endif	/* ATTAQUE_H */
 
