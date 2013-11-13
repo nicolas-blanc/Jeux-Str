@@ -9,7 +9,7 @@ public:
 
     AttaqueDeBase(float degat = 0.0, int portee = 0, int pointaction = 0);
 
-    //sceci a ete change
+
 
 private:
 
