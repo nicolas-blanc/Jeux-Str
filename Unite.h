@@ -2,13 +2,19 @@
 #define UNITE_H
 
 #include "./PointDeVie.h"
+
 #include <vector>
+#include <string>
+
+using namespace std;
 
 class Unite
 {
     public:
         Unite(unsigned int mvt, unsigned int ct, unsigned int pop, unsigned int vie, AttaqueDeBase atk, Case c);
         virtual ~Unite();
+        inline string getNom() { return m_nom;}
+        inline void setNom(string nom) { m_nom = nom; } // a modif -> abstrait ?
         inline int getMouvement() { return m_mouvement; }
         inline void setMouvement(int val) { if (val >= 0) m_mouvement = val; } // a modif exception
         inline int getCout() { return m_cout; }
@@ -22,13 +28,14 @@ class Unite
         inline Case getPosition() { return m_position; }
         inline void setPosition(Case val) { m_position = val; }
 
-        Sort getSort(int pos) { return v_sort[pos]) }
+        Sort getSort(int pos) { return v_sort[pos]; }
 
         void deplacer(Case c);
         void modifierVie(int vie);
-        void attaquer(Case c, Attaque attaque = GetattaqueParDefaut());
+        void attaquer(Case c, Attaque attaque = attaqueParDefaut);
     protected:
     private:
+        string m_nom;
         unsigned int m_mouvement;
         unsigned int m_cout;
         unsigned int m_population;

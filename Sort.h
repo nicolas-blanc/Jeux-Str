@@ -6,7 +6,7 @@
 
 class Sort : public Attaque {
 public:
-    Sort(float degat = 0.0, int portee = 0, int pointaction = 0);
+    Sort(int degat = 1, int portee = 1, int ptAction = 1);
 
 private:
 
