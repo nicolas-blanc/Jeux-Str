@@ -35,7 +35,7 @@ class Unite
         AttaqueDeBase attaqueParDefaut;
         PointDeVie m_vie;
         Case m_position;
-        vector<Sort*> v_sort;
+        vector <Sort*> v_sort;
 };
 
 #endif // UNITE_H

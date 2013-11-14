@@ -1,4 +1,4 @@
-#include "../include/PointDeVie.h"
+#include "PointDeVie.h"
 
 PointDeVie::PointDeVie(unsigned int mini, unsigned int maxi)
 {

@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Nb-Jeux-Str
+PROJECTNAME=Jeux-Str
 
 # Active Configuration
 DEFAULTCONF=Debug
