@@ -37,12 +37,16 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/Attaque.o \
 	${OBJECTDIR}/AttaqueDeBase.o \
+	${OBJECTDIR}/Batiment.o \
 	${OBJECTDIR}/Case.o \
 	${OBJECTDIR}/CaseGen.o \
 	${OBJECTDIR}/Effet.o \
 	${OBJECTDIR}/Entite.o \
+	${OBJECTDIR}/Guerrier.o \
+	${OBJECTDIR}/Joueur.o \
 	${OBJECTDIR}/Plateau.o \
 	${OBJECTDIR}/PointDeVie.o \
+	${OBJECTDIR}/Sort.o \
 	${OBJECTDIR}/Unite.o \
 	${OBJECTDIR}/main.o
 
@@ -81,6 +85,11 @@ ${OBJECTDIR}/AttaqueDeBase.o: AttaqueDeBase.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/AttaqueDeBase.o AttaqueDeBase.cpp
 
+${OBJECTDIR}/Batiment.o: Batiment.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Batiment.o Batiment.cpp
+
 ${OBJECTDIR}/Case.o: Case.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
@@ -101,6 +110,16 @@ ${OBJECTDIR}/Entite.o: Entite.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Entite.o Entite.cpp
 
+${OBJECTDIR}/Guerrier.o: Guerrier.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Guerrier.o Guerrier.cpp
+
+${OBJECTDIR}/Joueur.o: Joueur.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Joueur.o Joueur.cpp
+
 ${OBJECTDIR}/Plateau.o: Plateau.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
@@ -110,6 +129,11 @@ ${OBJECTDIR}/PointDeVie.o: PointDeVie.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/PointDeVie.o PointDeVie.cpp
+
+${OBJECTDIR}/Sort.o: Sort.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Sort.o Sort.cpp
 
 ${OBJECTDIR}/Unite.o: Unite.cpp 
 	${MKDIR} -p ${OBJECTDIR}

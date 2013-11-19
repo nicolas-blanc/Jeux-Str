@@ -15,6 +15,7 @@ class PointDeVie
         inline void SetValeur(int val) { if (val >= this->GetMin() && val <= this->GetMax()) m_Valeur = val; /*else exception*/}
 
         void modifVie(int val);
+        inline bool estMort() { return m_Valeur == 0;};
     protected:
     private:
         int m_Min;

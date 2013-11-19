@@ -8,10 +8,18 @@ Unite::Unite(unsigned int mvt, unsigned int ct, unsigned int pop, int vie, int m
     this->setPopulation(pop);
 }
 
-void deplacer(Case c) {
+Case Unite::deplacement(Case c) {
+    int dep = this->getDepX(c) + this->getDepY(c);
+    if(dep < this->m_mouvement)
+        return c;
+    else
+        return this->m_position;
 }
 
-void modifierVie(int vie) {
+void Unite::modifierVie(int vie) {
+    this->m_vie.modifVie(vie);
+    if (this->m_vie.estMort())
+        this->m_joueur.deleteUnite(this);
 }
 
 void Unite::attaquer(Case c, Attaque attaque = getAttaqueParDefaut()) {

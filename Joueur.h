@@ -11,8 +11,9 @@
 class Joueur {
 public:
     Joueur();
-    Joueur(const Joueur& orig);
     virtual ~Joueur();
+    
+    void deleteUnite(Unite unite);
 private:
 
 };

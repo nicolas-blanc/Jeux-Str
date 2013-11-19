@@ -10,9 +10,6 @@
 Joueur::Joueur() {
 }
 
-Joueur::Joueur(const Joueur& orig) {
-}
-
 Joueur::~Joueur() {
 }
 

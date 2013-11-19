@@ -20,6 +20,9 @@ public :
         void transmettreAttaque(int nbPV);
         bool isOccupee();
         void declencherEffets();
+        
+        inline int getX() { return 0; };
+        inline int getY() { return 0; };
 };
 
 #endif
