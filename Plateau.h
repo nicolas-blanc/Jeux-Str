@@ -12,7 +12,7 @@ class Plateau {
 private :
         int m_largeur;
         int m_longueur;
-        CaseGen*** plateau;
+        Case** plateau;
 
 public :
         Plateau(string nomFichier="plateau1.data");
