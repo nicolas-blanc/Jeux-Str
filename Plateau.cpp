@@ -10,29 +10,28 @@ Plateau::Plateau(string nomPlateau) {
     fichierPlateau.read((char*)&m_longueur,sizeof(int));
     fichierPlateau.read((char*)&m_largeur,sizeof(int));
     
-    //-----initialisation du plateau (tableau de pointeur vers Case à 2 dimensions)
-    plateau = new CaseGen**[m_largeur];
+    //-----initialisation du plateau (tableau de Case à 2 dimensions)
+    plateau = new Case*[m_largeur];
     for (int i=0 ; i < m_largeur ; i++) 
-        plateau[i] = new CaseGen*[m_longueur];
+        plateau[i] = new Case[m_longueur];
     
-    //-----initialisation de chaque case comme Case pour unité
+    
     for (int i=0; i< m_largeur; i++) {
         for (int j=0; j<m_longueur; j++) {
-            plateau[i][j] = (Case<Unite>*)malloc(sizeof(Case<Unite>));
-            //plateau[i][j] = new Case<Unite>(i,j);
+            plateau[i][j] = new Case(i,j);
         }
     }
         
+    /*lecture du fichier pour ajouter tous les batiments sur le plateau
     /*tant que fichier pas fini*/ {
-        int x,y;
-        int type=0;
-            fichierPlateau.read((char*)&type, sizeof(int));
-            fichierPlateau.read((char*)&x, sizeof(int));
-            fichierPlateau.read((char*)&y, sizeof(int));
-            plateau[x][y] = (Case<Batiment>*)realloc(plateau[x][y], sizeof(Case<Batiment>));
-            //plateau[x][y] = new Case<Batiment>(x,y);
-            //plateau[x][y]->setOccupant(new Batiment(type));
-    }
+     //   int x,y;
+    //    int type=0;
+            //fichierPlateau.read((char*)&type, sizeof(int));
+          //  fichierPlateau.read((char*)&x, sizeof(int));
+        //    fichierPlateau.read((char*)&y, sizeof(int));
+      //      plateau[x][y].
+    //}
+    
 }
 
 void Plateau::setPlateau() {
@@ -41,6 +40,6 @@ void Plateau::setPlateau() {
 
 Plateau::~Plateau() {
     for ( int i=0; i < m_largeur; i++) 
-        delete plateau[i]; 
-    delete plateau;
+        delete [] plateau[i]; 
+    delete [] plateau;
 }
