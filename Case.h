@@ -4,25 +4,26 @@
 #include <string>
 #include <vector>
 #include "Unite.h"
-#include "CaseGen.h"
+#include "Entite.h"
 #include "PV.h"
 
 using namespace std;
 
-template <class T>
-class Case : public CaseGen {
+class Case {
 private :
-        T occupant;
+        Entite occupant;
         vector<Effet> effets;
+        int m_x;
+        int m_y;
 public :
         Case(int x, int y);
-        void setOccupant(T occ);
+        void setOccupant(Entite occ);
         void transmettreAttaque(int nbPV);
         bool isOccupee();
         void declencherEffets();
         
-        inline int getX() { return 0; };
-        inline int getY() { return 0; };
+        inline int getX() { return m_x; };
+        inline int getY() { return m_y; };
 };
 
 #endif
