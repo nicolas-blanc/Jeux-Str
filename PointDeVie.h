@@ -5,7 +5,7 @@
 class PointDeVie
 {
     public:
-        PointDeVie(unsigned int mini, unsigned int maxi);
+        PointDeVie(int maxi,int mini);
         virtual ~PointDeVie();
         inline int GetMin() { return m_Min; }
         inline void SetMin(int val) { if (val >= 0) m_Min = val; /*else exception*/ }
@@ -17,9 +17,9 @@ class PointDeVie
         void modifVie(int val);
     protected:
     private:
-        unsigned int m_Min;
-        unsigned int m_Max;
-        unsigned int m_Valeur;
+        int m_Min;
+        int m_Max;
+        int m_Valeur;
 };
 
 #endif // POINTDEVIE_H

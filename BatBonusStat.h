@@ -19,7 +19,7 @@ class BatBonusStat
         int modifPopulation();
         // ...
 
-        // On appelle la modifiaction a chaque fois que l'on fais appel a la caract�ristique, on test dans cette fonction si le bonus correspond,
+        // On appelle la modifaction a chaque fois que l'on fais appel a la caracteristique, on test dans cette fonction si le bonus correspond,
             // et si il correspond, on a ajoute le bonus en fonction de nbTours
 
         int randomBonus();

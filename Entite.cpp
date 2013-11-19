@@ -1,9 +1,7 @@
 #include "Entite.h"
 
-Entite::Entite()
-{
-    //ctor
-}
+Entite::Entite(int vie, int min)
+:m_vie(vie,min,vie) {}
 
 Entite::~Entite()
 {

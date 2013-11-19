@@ -35,9 +35,12 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/Attaque.o \
+	${OBJECTDIR}/AttaqueDeBase.o \
 	${OBJECTDIR}/Case.o \
 	${OBJECTDIR}/CaseGen.o \
 	${OBJECTDIR}/Effet.o \
+	${OBJECTDIR}/Entite.o \
 	${OBJECTDIR}/Plateau.o \
 	${OBJECTDIR}/PointDeVie.o \
 	${OBJECTDIR}/Unite.o \
@@ -68,6 +71,16 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/jeux-str: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/jeux-str ${OBJECTFILES} ${LDLIBSOPTIONS}
 
+${OBJECTDIR}/Attaque.o: Attaque.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Attaque.o Attaque.cpp
+
+${OBJECTDIR}/AttaqueDeBase.o: AttaqueDeBase.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/AttaqueDeBase.o AttaqueDeBase.cpp
+
 ${OBJECTDIR}/Case.o: Case.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
@@ -82,6 +95,11 @@ ${OBJECTDIR}/Effet.o: Effet.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Effet.o Effet.cpp
+
+${OBJECTDIR}/Entite.o: Entite.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Entite.o Entite.cpp
 
 ${OBJECTDIR}/Plateau.o: Plateau.cpp 
 	${MKDIR} -p ${OBJECTDIR}

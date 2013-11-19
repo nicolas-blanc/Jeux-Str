@@ -1,17 +1,13 @@
 #ifndef ATTAQUEDEBASE_H
 #define	ATTAQUEDEBASE_H
 
-#include<iostream>
-#include<string>
-
 #include"Attaque.h"
 
 class AttaqueDeBase : public Attaque {
 public:
 
     AttaqueDeBase(int portee = 1);
-
-
+    void lancerAttaque(Case c);
 
 private:
 
