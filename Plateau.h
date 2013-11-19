@@ -3,7 +3,6 @@
 #include <iostream>
 #include <string>
 #include "Case.h"
-#include "CaseGen.h"
 #include "Unite.h"
 
 using namespace std;
