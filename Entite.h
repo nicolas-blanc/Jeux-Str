@@ -6,7 +6,7 @@
 #include <iomanip>
 
 #include "Attaque.h"
-#include "CaseGen.h"
+#include "Case.h"
 #include "PointDeVie.h"
 
 using namespace std;

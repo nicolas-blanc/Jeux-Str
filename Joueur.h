@@ -8,14 +8,26 @@
 #ifndef JOUEUR_H
 #define	JOUEUR_H
 
+#include <vector>
+
 class Joueur {
 public:
     Joueur();
     virtual ~Joueur();
     
+    int getModifMouvement();
+    
     void deleteUnite(Unite unite);
 private:
+    int m_couleur;
+    int m_numero;
+    
+    int m_PtActionJoueur;
 
+    vector<int> m_listeBonusJoueur;
+    // Vecteur des bonus pour le joueur 
+        // => exemple, le 1er element correspond à un bonus de dégat
+                // le 2e element correspond à un bonus de portée, etc
 };
 
 #endif	/* JOUEUR_H */

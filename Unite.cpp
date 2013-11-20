@@ -25,3 +25,10 @@ void Unite::modifierVie(int vie) {
 void Unite::attaquer(Case c, Attaque attaque = getAttaqueParDefaut()) {
     attaque.lancerAttaque(c);
 }
+
+int Unite::getMouvement() {
+    int mvt;
+    mvt = m_mouvement + Joueur::getModifMouvement();
+    
+    
+}

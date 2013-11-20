@@ -17,7 +17,7 @@ class BatBonusStat
         int modifPortee();
         int modifPtAction();
         int modifPopulation();
-        // ...
+        int modifMouvement();
 
         // On appelle la modifaction a chaque fois que l'on fais appel a la caracteristique, on test dans cette fonction si le bonus correspond,
             // et si il correspond, on a ajoute le bonus en fonction de nbTours
