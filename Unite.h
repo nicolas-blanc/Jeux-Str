@@ -24,6 +24,9 @@ class Unite : public Entite {
         Case deplacement(Case c);
         void modifierVie(int vie);
         void attaquer(Case c, Attaque attaque = m_AttaqueParDefaut);
+        
+        inline void insererEffet(Effet effet) { this->v_effet.push_back(effet); };
+        void enleverEffet(Effet effet);
 
     protected:
         string m_nom;
@@ -31,7 +34,8 @@ class Unite : public Entite {
         unsigned int m_cout;
         unsigned int m_population;
         AttaqueDeBase m_AttaqueParDefaut;
-        vector <Sort*> v_sort;
+        vector <Sort> v_sort;
+        vector <Effet> v_effet;
 
     private:
         inline int getDepX(Case c) { int dep = c.getX() - Entite::getPosition().getX; if(dep < 0) return (-dep); else return dep; };

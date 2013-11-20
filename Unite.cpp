@@ -30,5 +30,11 @@ int Unite::getMouvement() {
     int mvt;
     mvt = m_mouvement + Joueur::getModifMouvement();
     
+    return mvt;
+}
+
+void Unite::enleverEffet(Effet effet) {
+    vector<Effet>::iterator trouve = find(this->v_effet.begin(), this->v_effet.end(), effet);
     
+    this->v_effet.erase(trouve);
 }

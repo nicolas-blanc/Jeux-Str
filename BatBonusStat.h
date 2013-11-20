@@ -13,14 +13,8 @@ class BatBonusStat
 
         void setJoueur(Joueur joueur);
 
-        int modifAttaque();
-        int modifPortee();
-        int modifPtAction();
-        int modifPopulation();
-        int modifMouvement();
-
-        // On appelle la modifaction a chaque fois que l'on fais appel a la caracteristique, on test dans cette fonction si le bonus correspond,
-            // et si il correspond, on a ajoute le bonus en fonction de nbTours
+        int modifBonus();
+        // Modifie le bonus dans le vector de joueur, en fonction du bonus et du nombre de tours
 
         int randomBonus();
     protected:

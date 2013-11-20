@@ -3,7 +3,8 @@
 
 #include <iostream>
 #include <string>
-#include "CaseGen.h"
+
+#include "Case.h"
 
 using namespace std;
 

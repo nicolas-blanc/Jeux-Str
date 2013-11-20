@@ -18,6 +18,8 @@ public:
     int getModifMouvement();
     
     void deleteUnite(Unite unite);
+    
+    int& operator[] (unsigned int i) { return m_listeBonusJoueur[i]; };
 private:
     int m_couleur;
     int m_numero;
