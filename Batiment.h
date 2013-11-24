@@ -8,6 +8,7 @@
 #ifndef BATIMENT_H
 #define	BATIMENT_H
 
+#include "Entite.h"
 
 class Batiment : public Entite {
 public:

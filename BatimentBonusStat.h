@@ -1,6 +1,7 @@
 #ifndef BATIMENTBONUSSTAT_H
 #define BATIMENTBONUSSTAT_H
 
+#include "Batiment.h"
 
 class BatimentBonusStat : public Batiment
 {

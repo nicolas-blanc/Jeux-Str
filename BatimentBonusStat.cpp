@@ -10,14 +10,30 @@
         void BatimentBonusStat::modifBonus()
         // Modifie le bonus dans le vector de joueur, en fonction du bonus et du nombre de tours
         {
+            
             setNbTours(getNbTours()++);
-            setBonus(m_Bonus + m_NbTours/5);
-            miseAJourBonus();
+            
+           
+            switch(getStat())
+            {
+                case 0:
+                    //ecrire algo ex: setBonus(m_Bonus+m_NbTours/5);
+                    break;
+                case 1:
+                    //algo
+                    break;
+                    //...
+                default:
+                    //
+                    break;
+            }
+            
+             miseAJourBonus();
         }
         
         void BatimentBonusStat::randomBonus()
         {
-            setBonus(rand_a_b(1, 6));
+            setBonus();
             miseAJourBonus();
         }
         void BatimentBonusStat::randomStat()

@@ -9,7 +9,6 @@
       <itemPath>Batiment.h</itemPath>
       <itemPath>BatimentBonusStat.h</itemPath>
       <itemPath>Case.h</itemPath>
-      <itemPath>CaseGen.h</itemPath>
       <itemPath>Effet.h</itemPath>
       <itemPath>Entite.h</itemPath>
       <itemPath>Guerrier.h</itemPath>
@@ -31,7 +30,6 @@
       <itemPath>Batiment.cpp</itemPath>
       <itemPath>BatimentBonusStat.cpp</itemPath>
       <itemPath>Case.cpp</itemPath>
-      <itemPath>CaseGen.cpp</itemPath>
       <itemPath>Effet.cpp</itemPath>
       <itemPath>Entite.cpp</itemPath>
       <itemPath>Guerrier.cpp</itemPath>
@@ -83,10 +81,6 @@
       <item path="Case.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Case.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="CaseGen.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CaseGen.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Effet.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -162,10 +156,6 @@
       <item path="Case.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Case.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="CaseGen.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="CaseGen.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Effet.cpp" ex="false" tool="1" flavor2="0">
       </item>
