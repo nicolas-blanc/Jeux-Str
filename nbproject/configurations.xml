@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configurationDescriptor version="89">
+<configurationDescriptor version="90">
   <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
       <itemPath>Attaque.h</itemPath>
       <itemPath>AttaqueDeBase.h</itemPath>
-      <itemPath>BatBonusStat.h</itemPath>
       <itemPath>Batiment.h</itemPath>
+      <itemPath>BatimentBonusStat.h</itemPath>
       <itemPath>Case.h</itemPath>
       <itemPath>CaseGen.h</itemPath>
       <itemPath>Effet.h</itemPath>
@@ -29,6 +29,7 @@
       <itemPath>Attaque.cpp</itemPath>
       <itemPath>AttaqueDeBase.cpp</itemPath>
       <itemPath>Batiment.cpp</itemPath>
+      <itemPath>BatimentBonusStat.cpp</itemPath>
       <itemPath>Case.cpp</itemPath>
       <itemPath>CaseGen.cpp</itemPath>
       <itemPath>Effet.cpp</itemPath>
@@ -57,7 +58,6 @@
   <confs>
     <conf name="Debug" type="1">
       <toolsSet>
-        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
         <compilerSet>default</compilerSet>
         <dependencyChecking>true</dependencyChecking>
         <rebuildPropChanged>false</rebuildPropChanged>
@@ -72,11 +72,13 @@
       </item>
       <item path="AttaqueDeBase.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="BatBonusStat.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="Batiment.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Batiment.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BatimentBonusStat.cpp" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="BatimentBonusStat.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Case.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -123,7 +125,6 @@
     </conf>
     <conf name="Release" type="1">
       <toolsSet>
-        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
         <compilerSet>default</compilerSet>
         <dependencyChecking>true</dependencyChecking>
         <rebuildPropChanged>false</rebuildPropChanged>
@@ -150,11 +151,13 @@
       </item>
       <item path="AttaqueDeBase.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="BatBonusStat.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="Batiment.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Batiment.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BatimentBonusStat.cpp" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="BatimentBonusStat.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Case.cpp" ex="false" tool="1" flavor2="0">
       </item>

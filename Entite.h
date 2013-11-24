@@ -22,6 +22,7 @@ class Entite
         inline void setVie(int val) { m_vie.SetValeur(val); }
         inline Case getPosition() { return m_position; }
         inline void setPosition(Case val) { m_position = val; }
+        inline void setJoueur(Joueur j){ m_joueur = j;}
 
     protected:
         string m_nom;

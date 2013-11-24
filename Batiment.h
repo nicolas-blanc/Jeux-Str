@@ -8,9 +8,10 @@
 #ifndef BATIMENT_H
 #define	BATIMENT_H
 
+
 class Batiment : public Entite {
 public:
-    Batiment();
+    Batiment(Vector<case> ensCase, Joueur j, string nom);
     Batiment(const Batiment& orig);
     virtual ~Batiment();
 private:
