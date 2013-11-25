@@ -28,8 +28,12 @@ private:
 
     vector<int> m_listeBonusJoueur;
     // Vecteur des bonus pour le joueur 
-        // => exemple, le 1er element correspond à un bonus de dégat
-                // le 2e element correspond à un bonus de portée, etc
+        // le 1er element correspond à un bonus de population
+        // le 2e element correspond à un bonus de pointAction
+        // le 3e element correspond à un bonus de pointDeVie
+        // le 4e element correspond à un bonus de dégât
+        // le 5e element correspond à un bonus de portée
+        // le 6e element correspond à un bonus de mouvement
 };
 
 #endif	/* JOUEUR_H */
