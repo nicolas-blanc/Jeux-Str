@@ -4,6 +4,20 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>Attaque.h</itemPath>
+      <itemPath>AttaqueDeBase.h</itemPath>
+      <itemPath>Batiment.h</itemPath>
+      <itemPath>BatimentBonusStat.h</itemPath>
+      <itemPath>Case.h</itemPath>
+      <itemPath>Effet.h</itemPath>
+      <itemPath>Entite.h</itemPath>
+      <itemPath>Guerrier.h</itemPath>
+      <itemPath>Joueur.h</itemPath>
+      <itemPath>Plateau.h</itemPath>
+      <itemPath>PointDeVie.h</itemPath>
+      <itemPath>Sort.h</itemPath>
+      <itemPath>Tour.h</itemPath>
+      <itemPath>Unite.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -12,6 +26,20 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>Attaque.cpp</itemPath>
+      <itemPath>AttaqueDeBase.cpp</itemPath>
+      <itemPath>Batiment.cpp</itemPath>
+      <itemPath>BatimentBonusStat.cpp</itemPath>
+      <itemPath>Case.cpp</itemPath>
+      <itemPath>Effet.cpp</itemPath>
+      <itemPath>Entite.cpp</itemPath>
+      <itemPath>Guerrier.cpp</itemPath>
+      <itemPath>Joueur.cpp</itemPath>
+      <itemPath>Plateau.cpp</itemPath>
+      <itemPath>PointDeVie.cpp</itemPath>
+      <itemPath>Sort.cpp</itemPath>
+      <itemPath>Tour.cpp</itemPath>
+      <itemPath>Unite.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -35,6 +63,62 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="Attaque.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Attaque.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="AttaqueDeBase.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="AttaqueDeBase.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Batiment.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Batiment.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BatimentBonusStat.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BatimentBonusStat.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Case.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Case.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Effet.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Effet.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Entite.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Entite.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Guerrier.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Guerrier.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Joueur.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Joueur.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Plateau.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Plateau.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PointDeVie.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PointDeVie.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Sort.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Sort.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Tour.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Tour.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Unite.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Unite.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>
@@ -57,6 +141,62 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="Attaque.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Attaque.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="AttaqueDeBase.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="AttaqueDeBase.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Batiment.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Batiment.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="BatimentBonusStat.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="BatimentBonusStat.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Case.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Case.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Effet.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Effet.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Entite.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Entite.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Guerrier.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Guerrier.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Joueur.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Joueur.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Plateau.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Plateau.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="PointDeVie.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="PointDeVie.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Sort.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Sort.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Tour.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Tour.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Unite.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Unite.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
     </conf>

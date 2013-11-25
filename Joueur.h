@@ -14,7 +14,7 @@ class Joueur {
 public:
     Joueur();
     virtual ~Joueur();
-    
+    inline void setListeBonusJoueur(int indice, int bonus){m_listeBonusJoueur[indice] = bonus;}
     int getModifMouvement();
     
     void deleteUnite(Unite unite);
@@ -25,7 +25,6 @@ private:
     int m_numero;
     
     int m_PtActionJoueur;
-
     vector<int> m_listeBonusJoueur;
     // Vecteur des bonus pour le joueur 
         // le 1er element correspond à un bonus de population

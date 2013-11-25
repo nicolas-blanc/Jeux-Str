@@ -12,7 +12,7 @@
 
 class Batiment : public Entite {
 public:
-    Batiment(vector<case> ensCase, Joueur j, string nom, int vieMax, int vieMin);
+    Batiment(vector<Case> ensCase, Joueur j, string nom, int vieMin, int vieMax);
 private:
 
 };

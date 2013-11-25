@@ -4,6 +4,7 @@
 #include <string>
 
 #include <iomanip>
+#include <vector>
 
 #include "Attaque.h"
 #include "Case.h"
@@ -14,7 +15,7 @@ using namespace std;
 class Entite
 {
     public:
-        Entite(int vie);
+        Entite(vector<Case> ensCase, Joueur j, string nom, int vieMin, int vieMax);
         virtual ~Entite();
         inline string Getnom() { return m_nom; }
         inline void Setnom(string val) { m_nom = val; }
@@ -28,7 +29,7 @@ class Entite
     protected:
         string m_nom;
         PointDeVie m_vie;
-        Case m_position;
+        vector<Case> m_position;
         Joueur m_joueur;
 };
 

@@ -1,6 +1,6 @@
 #include "BatimentBonusStat.h"
 
-       BatimentBonusStat::BatimentBonusStat(Vector<Case> ensCase, Joueur j, String nom, int stat) : Batiment(ensCase, j, nom, -1, -1) 
+       BatimentBonusStat::BatimentBonusStat(vector<Case> ensCase, Joueur j, string nom, int stat) : Batiment(ensCase, j, nom, -1, -1) 
         {
             setStat(stat);
             setBonus(0);
@@ -48,7 +48,7 @@
                     setBonus(5);
                     break;
                 case 1:
-                    setBonus(nbToursTotal/2);//nbToursTotal variable global
+                    setBonus(/*nbToursTotal/2*/);//nbToursTotal variable global
                     break;
                case 2:
                     setBonus(1);

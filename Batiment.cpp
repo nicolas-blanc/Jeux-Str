@@ -7,7 +7,7 @@
 
 #include "Batiment.h"
 
-Batiment::Batiment(Vector<case> ensCase, Joueur j, string nom, int vieMax, int vieMin) : Entite(ensCase, j, nom, -1, -1)
+Batiment::Batiment(vector<Case> ensCase, Joueur j, string nom, int vieMin, int vieMax) : Entite(ensCase, j, nom, -1, -1)
 {
     
 }
