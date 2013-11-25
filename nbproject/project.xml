@@ -3,15 +3,10 @@
     <type>org.netbeans.modules.cnd.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>Jeux</name>
+            <name>Jeux-Str</name>
             <c-extensions/>
-<<<<<<< HEAD
             <cpp-extensions>cpp</cpp-extensions>
-=======
-            <cpp-extensions/>
->>>>>>> 21fd5cc8b9e1cd95a54f6f2d7fd3a00704ee447e
-            <header-extensions>h</header-extensions>
-            <sourceEncoding>UTF-8</sourceEncoding>
+            <header-extensions/>
             <make-dep-projects/>
             <sourceRootList/>
             <confList>
@@ -24,6 +19,7 @@
                     <type>1</type>
                 </confElem>
             </confList>
+            <sourceEncoding>UTF-8</sourceEncoding>
         </data>
     </configuration>
 </project>

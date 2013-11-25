@@ -35,22 +35,6 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/Attaque.o \
-	${OBJECTDIR}/AttaqueDeBase.o \
-	${OBJECTDIR}/Batiment.o \
-<<<<<<< HEAD
-	${OBJECTDIR}/BatimentBonusStat.o \
-	${OBJECTDIR}/Case.o \
-=======
->>>>>>> 21fd5cc8b9e1cd95a54f6f2d7fd3a00704ee447e
-	${OBJECTDIR}/Effet.o \
-	${OBJECTDIR}/Entite.o \
-	${OBJECTDIR}/Guerrier.o \
-	${OBJECTDIR}/Joueur.o \
-	${OBJECTDIR}/Plateau.o \
-	${OBJECTDIR}/PointDeVie.o \
-	${OBJECTDIR}/Sort.o \
-	${OBJECTDIR}/Unite.o \
 	${OBJECTDIR}/main.o
 
 
@@ -77,74 +61,6 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/jeux-str: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/jeux-str ${OBJECTFILES} ${LDLIBSOPTIONS}
-
-${OBJECTDIR}/Attaque.o: Attaque.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Attaque.o Attaque.cpp
-
-${OBJECTDIR}/AttaqueDeBase.o: AttaqueDeBase.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/AttaqueDeBase.o AttaqueDeBase.cpp
-
-${OBJECTDIR}/Batiment.o: Batiment.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Batiment.o Batiment.cpp
-
-<<<<<<< HEAD
-${OBJECTDIR}/BatimentBonusStat.o: BatimentBonusStat.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.c) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/BatimentBonusStat.o BatimentBonusStat.cpp
-
-${OBJECTDIR}/Case.o: Case.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Case.o Case.cpp
-
-=======
->>>>>>> 21fd5cc8b9e1cd95a54f6f2d7fd3a00704ee447e
-${OBJECTDIR}/Effet.o: Effet.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Effet.o Effet.cpp
-
-${OBJECTDIR}/Entite.o: Entite.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Entite.o Entite.cpp
-
-${OBJECTDIR}/Guerrier.o: Guerrier.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Guerrier.o Guerrier.cpp
-
-${OBJECTDIR}/Joueur.o: Joueur.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Joueur.o Joueur.cpp
-
-${OBJECTDIR}/Plateau.o: Plateau.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Plateau.o Plateau.cpp
-
-${OBJECTDIR}/PointDeVie.o: PointDeVie.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/PointDeVie.o PointDeVie.cpp
-
-${OBJECTDIR}/Sort.o: Sort.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Sort.o Sort.cpp
-
-${OBJECTDIR}/Unite.o: Unite.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Unite.o Unite.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
