@@ -7,7 +7,7 @@ class AttaqueDeBase : public Attaque {
 public:
 
     AttaqueDeBase(int portee = 1);
-    void lancerAttaque(Case c);
+    void lancerAttaque(Case* c);
 
 private:
 

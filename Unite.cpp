@@ -1,7 +1,6 @@
 #include "Unite.h"
 
-Unite::Unite(unsigned int mvt, unsigned int ct, unsigned int pop, int vie, int min)
-: Entite(vie,min)
+Unite::Unite(unsigned int mvt, unsigned int ct, unsigned int pop, int vie, int min, Case c) : Entite(vie,min,c)
 {
     this->setMouvement(mvt);
     this->setCout(ct);
@@ -19,22 +18,22 @@ Case Unite::deplacement(Case c) {
 void Unite::modifierVie(int vie) {
     this->m_vie.modifVie(vie);
     if (this->m_vie.estMort())
-        this->m_joueur.deleteUnite(this);
+        getJoueur()->deleteUnite(this);
 }
 
-void Unite::attaquer(Case c, Attaque attaque = getAttaqueParDefaut()) {
-    attaque.lancerAttaque(c);
+void Unite::attaquer(Case c, Attaque* attaque) {
+    attaque->lancerAttaque(&c);
+}
+
+void Unite::attaquer(Case c) {
+    m_AttaqueParDefaut->lancerAttaque(&c);
 }
 
 int Unite::getMouvement() {
     int mvt;
-    mvt = m_mouvement + Joueur::getModifMouvement();
+    mvt = m_mouvement; //+bonus
     
     return mvt;
 }
 
-void Unite::enleverEffet(Effet effet) {
-    vector<Effet>::iterator trouve = find(this->v_effet.begin(), this->v_effet.end(), effet);
-    
-    this->v_effet.erase(trouve);
-}
+//Penser à supprimer l'effet quand il arrive à 0 tours

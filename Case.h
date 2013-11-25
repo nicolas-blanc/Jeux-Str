@@ -3,21 +3,21 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "Unite.h"
-#include "Entite.h"
 #include "PointDeVie.h"
 
 using namespace std;
 
+class Entite;
+class Effet;
 class Case {
 private :
-        Entite occupant;
+        Entite* m_occupant;
         vector<Effet> effets;
         int m_x;
         int m_y;
 public :
         Case(int x, int y);
-        void setOccupant(Entite occ);
+        void setOccupant(Entite* occ);
         void transmettreAttaque(int nbPV);
         bool isOccupee();
         void declencherEffets();
@@ -25,5 +25,7 @@ public :
         inline int getX() { return m_x; };
         inline int getY() { return m_y; };
 };
+#include "Effet.h"
+#include "Entite.h"
 
 #endif

@@ -5,8 +5,8 @@
 
 class Sort : public Attaque {
 public:
-    Sort(int degat = 1, int portee = 1, int ptAction = 1, int zone = 1, string nom);
-    void lancerAttaque(Case c);
+    Sort(string nom, int degat = 1, int portee = 1, int ptAction = 1, int zone = 1);
+    void lancerAttaque(Case* c);
 
 private:
     string m_nomSort;

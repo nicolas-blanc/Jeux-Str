@@ -2,26 +2,30 @@
 #include "Effet.h"
 
 
-Case::Case(int x, int y) : CaseGen(x,y) {}
+Case::Case(int x, int y) {
+    m_x=x;
+    m_y=y;
+    m_occupant=NULL;
+}
 
-void Case::setOccupant(Entite occ) {
-	occupant = occ;
+void Case::setOccupant(Entite* occ) {
+    m_occupant = occ;
 }
 
 void Case::transmettreAttaque(int nbPV) {
-    if (occupant!=NULL) {
-            occupant.modifPV(nbPV);
+    if (m_occupant!=NULL) {
+            m_occupant->modifPV(nbPV);
     }
 }
 
-bool Case<T>::isOccupee() {
-    return (occupant != NULL);
+bool Case::isOccupee() {
+    return (m_occupant != NULL);
 }
 
 void Case::declencherEffets() {
     int vectSize = effets.size();
     for (int i=0; i<vectSize; i++) {
-        effets[i].lancerSort(this);
+        effets[i].getSort()->lancerAttaque(this);
         effets[i].decreaseTour();
     }
 }

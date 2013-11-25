@@ -3,12 +3,15 @@
 
 #include <iostream>
 #include <string>
-
-#include "Case.h"
-
 using namespace std;
 
+
+class Case;
 class Attaque {
+protected:
+    int m_Degat;
+    int m_Portee;
+    int m_PtAction;
 public:
     Attaque(int portee, int degat = 1, int ptAction = 1);
     void Attaquer();
@@ -19,12 +22,9 @@ public:
     inline void setPtAction(int ptAction) { m_PtAction = ptAction; };
     inline int getPtAction() { return m_PtAction; };
     
-    virtual void lancerAttaque(Case c) = 0; //C'est une fonction virtuelle pure --> classe abstraite
-protected:
-    int m_Degat;
-    int m_Portee;
-    int m_PtAction;
+    virtual void lancerAttaque(Case* c); //C'est une fonction virtuelle pure --> classe abstraite
 };
+#include "Case.h"
 
 #endif	/* ATTAQUE_H */
 

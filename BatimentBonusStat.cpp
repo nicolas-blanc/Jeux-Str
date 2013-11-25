@@ -1,82 +1,56 @@
 #include "BatimentBonusStat.h"
 
-       BatimentBonusStat::BatimentBonusStat(vector<Case> ensCase, Joueur j, string nom, int stat) : Batiment(ensCase, j, nom, -1, -1) 
-        {
-            setStat(stat);
-            setBonus(0);
-            setNbTours(0);
-       }
+BatimentBonusStat::BatimentBonusStat(vector<Case> ensCase, Joueur j, string nom, int stat, int vie) : Batiment(ensCase, &j, nom, vie)
+ {
+     setStat(stat);
+     setBonus(0);
+     setNbTours(0);
+     srand (time(NULL)); 
+ }
 
-        void BatimentBonusStat::modifBonus()
-        // Modifie le bonus dans le vector de joueur, en fonction du bonus et du nombre de tours
-        {
-            
-            setNbTours(getNbTours()++);
-            
-           
-           switch(getStat())
-            {
-                case 0:
-                    setBonus(getBonus() + getNbTours()/2);
-                    break;
-                case 1:
-                    setBonus(getBonus() + getNbTours()/2);
-                    break;
-               case 2:
-                    setBonus(getBonus() + getNbTours()/4);
-                    break;
-               case 3:
-                    setBonus(getBonus() + getNbTours()/6);
-                    break;
-               case 4:
-                    setBonus(getBonus() + getNbTours()/4);
-                    break;
-               case 5:
-                    setBonus(getBonus() + getNbTours()/3);
-                    break;
+ void BatimentBonusStat::modifBonus()
+ // Modifie le bonus dans le vector de joueur, en fonction du bonus et du nombre de tours
+ {
 
-            }
-            
-             miseAJourBonus();
-        }
-        
-        void BatimentBonusStat::Bonus()
-        {
-            switch(getStat())
-            {
-                case 0:
-                    setBonus(5);
-                    break;
-                case 1:
-                    setBonus(/*nbToursTotal/2*/);//nbToursTotal variable global
-                    break;
-               case 2:
-                    setBonus(1);
-                    break;
-               case 3:
-                    setBonus(1);
-                    break;
-               case 4:
-                    setBonus(1);
-                    break;
-               case 5:
-                    setBonus(2);
-                    break;
+     setNbTours(getNbTours()+1);
 
-            }
-            miseAJourBonus();
-        }
-        void BatimentBonusStat::randomStat()
-        {
-            setStat(rand_a_b(0, 7));
-        }
-        
-        void BatimentBonusStat::changementProprio(Joueur j)
-        {
-            Entite::setJoueur(j);
-            if(getStat()>1)
-            randomStat();
-            Bonus();
-            setNbTours(0);
-        }
-        
+
+     switch(getStat())
+     {
+         case 0:
+             //ecrire algo ex: setBonus(m_Bonus+m_NbTours/5);
+             break;
+         case 1:
+             //algo
+             break;
+             //...
+         default:
+             //
+             break;
+     }
+
+      miseAJourBonus();
+ }
+
+ void BatimentBonusStat::randomBonus()
+ {
+     //setBonus();
+     miseAJourBonus();
+ }
+ void BatimentBonusStat::randomStat()
+ {
+     setStat(rand_a_b(0, 7));
+ }
+
+ void BatimentBonusStat::changementProprio(Joueur j)
+ {
+     Entite::setJoueur(&j);
+     randomBonus();
+     if(getStat()>1)
+     randomStat();
+     setNbTours(0);
+ }
+
+void BatimentBonusStat::miseAJourBonus() {
+    //getJoueur().m_listeBonusJoueur[getStat()] = getBonus(); <= marche pas
+}

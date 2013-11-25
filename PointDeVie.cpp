@@ -1,6 +1,6 @@
 #include "PointDeVie.h"
 
-PointDeVie::PointDeVie(unsigned int mini, unsigned int maxi)
+PointDeVie::PointDeVie(int mini, int maxi)
 {
     this->SetMin(mini);
     this->SetMax(maxi);

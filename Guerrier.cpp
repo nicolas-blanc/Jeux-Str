@@ -8,8 +8,8 @@
 #include "Guerrier.h"
 #include "Unite.h"
 
-Guerrier::Guerrier(unsigned int mvt, unsigned int ct, unsigned int pop, int vie, int min)
-:Unite(mvt,ct,pop,vie,min)
+Guerrier::Guerrier(Case c)
+:Unite(5,2,1,5,0,c)
 {
     this->m_AttaqueParDefaut = new AttaqueDeBase();
 }

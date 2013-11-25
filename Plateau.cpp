@@ -11,9 +11,9 @@ Plateau::Plateau(string nomPlateau) {
     fichierPlateau.read((char*)&m_largeur,sizeof(int));
     
     //-----initialisation du plateau (tableau de Case à 2 dimensions)
-    plateau = new Case*[m_largeur];
+    plateau = new Case**[m_largeur];
     for (int i=0 ; i < m_largeur ; i++) 
-        plateau[i] = new Case[m_longueur];
+        plateau[i] = new Case*[m_longueur];
     
     
     for (int i=0; i< m_largeur; i++) {
@@ -32,6 +32,7 @@ Plateau::Plateau(string nomPlateau) {
       //      plateau[x][y].
     //}
     
+}
 }
 
 void Plateau::setPlateau() {
