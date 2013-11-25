@@ -38,8 +38,11 @@ OBJECTFILES= \
 	${OBJECTDIR}/Attaque.o \
 	${OBJECTDIR}/AttaqueDeBase.o \
 	${OBJECTDIR}/Batiment.o \
+<<<<<<< HEAD
 	${OBJECTDIR}/BatimentBonusStat.o \
 	${OBJECTDIR}/Case.o \
+=======
+>>>>>>> 21fd5cc8b9e1cd95a54f6f2d7fd3a00704ee447e
 	${OBJECTDIR}/Effet.o \
 	${OBJECTDIR}/Entite.o \
 	${OBJECTDIR}/Guerrier.o \
@@ -90,6 +93,7 @@ ${OBJECTDIR}/Batiment.o: Batiment.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Batiment.o Batiment.cpp
 
+<<<<<<< HEAD
 ${OBJECTDIR}/BatimentBonusStat.o: BatimentBonusStat.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
@@ -100,6 +104,8 @@ ${OBJECTDIR}/Case.o: Case.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Case.o Case.cpp
 
+=======
+>>>>>>> 21fd5cc8b9e1cd95a54f6f2d7fd3a00704ee447e
 ${OBJECTDIR}/Effet.o: Effet.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
