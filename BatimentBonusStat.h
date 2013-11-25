@@ -24,7 +24,7 @@ class BatimentBonusStat : public Batiment
         void modifBonus();
         // Modifie le bonus dans le vector de joueur, en fonction du bonus et du nombre de tours
         
-        void randomBonus();
+        void Bonus();
         
         void randomStat();
 

@@ -38,8 +38,8 @@ OBJECTFILES= \
 	${OBJECTDIR}/Attaque.o \
 	${OBJECTDIR}/AttaqueDeBase.o \
 	${OBJECTDIR}/Batiment.o \
+	${OBJECTDIR}/BatimentBonusStat.o \
 	${OBJECTDIR}/Case.o \
-	${OBJECTDIR}/CaseGen.o \
 	${OBJECTDIR}/Effet.o \
 	${OBJECTDIR}/Entite.o \
 	${OBJECTDIR}/Guerrier.o \
@@ -90,15 +90,15 @@ ${OBJECTDIR}/Batiment.o: Batiment.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/Batiment.o Batiment.cpp
 
+${OBJECTDIR}/BatimentBonusStat.o: BatimentBonusStat.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.c) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/BatimentBonusStat.o BatimentBonusStat.cpp
+
 ${OBJECTDIR}/Case.o: Case.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/Case.o Case.cpp
-
-${OBJECTDIR}/CaseGen.o: CaseGen.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} $@.d
-	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/CaseGen.o CaseGen.cpp
 
 ${OBJECTDIR}/Effet.o: Effet.cpp 
 	${MKDIR} -p ${OBJECTDIR}
