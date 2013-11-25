@@ -14,8 +14,7 @@ using std::vector;
 class Joueur;
 class Batiment : public Entite {
 public:
-    Batiment(vector<Case> ensCase, Joueur* j, string nom, int vie);
-    virtual ~Batiment();
+      Batiment(vector<Case> ensCase, Joueur j, string nom, int vieMin, int vieMax);
 private:
     
 };

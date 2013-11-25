@@ -16,7 +16,7 @@ class Joueur {
 public:
     Joueur();
     virtual ~Joueur();
-        
+    inline void setListeBonusJoueur(int indice, int bonus){m_listeBonusJoueur[indice] = bonus;}
     void deleteUnite(Unite* unite);
     void deleteBatiment(Batiment* bat);
     

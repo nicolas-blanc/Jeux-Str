@@ -15,7 +15,7 @@ class Joueur;
 class Entite
 {
     public:
-        Entite(int vie, int min, Case c);
+        Entite(vector<Case> ensCase, Joueur j, string nom, int vieMin, int vieMax);
         virtual ~Entite();
         inline string Getnom() { return m_nom; }
         inline void Setnom(string val) { m_nom = val; }
@@ -30,7 +30,7 @@ class Entite
     protected:
         string m_nom;
         PointDeVie m_vie;
-        Case m_position;
+        vector<Case> m_position;
         Joueur* m_joueur;
 };
 #include "Joueur.h"
