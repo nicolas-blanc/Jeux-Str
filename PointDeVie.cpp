@@ -15,3 +15,7 @@ void PointDeVie::modifVie(int val) {
     else
         this->SetValeur(this->GetValeur() + val);
 }
+
+PointDeVie::~PointDeVie() {
+    
+}

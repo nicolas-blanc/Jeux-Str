@@ -7,3 +7,7 @@ Entite::~Entite()
 {
     //dtor
 }
+
+void Entite::modifPV(int i) {
+    
+}

@@ -35,7 +35,7 @@ class Unite : public Entite {
         unsigned int m_mouvement;
         unsigned int m_cout;
         unsigned int m_population;
-        static AttaqueDeBase* m_AttaqueParDefaut;
+        AttaqueDeBase* m_AttaqueParDefaut;
         vector <Sort> v_sort;
         vector <Effet> v_effet;
 

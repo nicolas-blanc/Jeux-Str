@@ -5,3 +5,7 @@ Attaque::Attaque(int portee, int degat, int ptAction) {
     m_Degat = degat;
     m_PtAction = ptAction;    
 }
+
+void Attaque::lancerAttaque(Case* c) {
+    
+}

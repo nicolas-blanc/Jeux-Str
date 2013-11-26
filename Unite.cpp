@@ -36,4 +36,12 @@ int Unite::getMouvement() {
     return mvt;
 }
 
+Unite::~Unite() {
+    
+}
+
+void Unite::initSort() {
+    
+}
+
 //Penser à supprimer l'effet quand il arrive à 0 tours

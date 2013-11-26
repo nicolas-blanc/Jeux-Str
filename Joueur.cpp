@@ -13,3 +13,6 @@ Joueur::Joueur() {
 Joueur::~Joueur() {
 }
 
+void Joueur::deleteUnite(Unite* unite) {
+    
+}
