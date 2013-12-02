@@ -11,7 +11,7 @@ class BatimentBonusStat : public Batiment
         int m_Stat;
         int m_Bonus;
         int m_NbTours;
-        
+
     public :
         BatimentBonusStat(vector<Case> EnsCase, Joueur j, string nom, int stat = 0);
         inline int getStat() { return m_Stat;}
@@ -21,13 +21,13 @@ class BatimentBonusStat : public Batiment
         inline int getNbTours() { return m_NbTours; }
         inline void setNbTours(int nbTours) { m_NbTours = nbTours; }
         inline int rand_a_b(int a, int b) { return rand()%(b-a) +a;}
-        inline void miseAJourBonus(){getJoueur().setListeBonusJoueur(getStat(), getBonus());}
+        inline void miseAJourBonus(){getJoueur()->setListeBonusJoueur(getStat(), getBonus());}
 
         void modifBonus();
         // Modifie le bonus dans le vector de joueur, en fonction du bonus et du nombre de tours
-        
+
         void Bonus();
-        
+
         void randomStat();
 
         void changementProprio(Joueur j);

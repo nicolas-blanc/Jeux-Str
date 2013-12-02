@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   Guerrier.h
  * Author: blancn
  *
@@ -12,7 +12,7 @@ using namespace std;
 
 class Guerrier : public Unite {
 public:
-    Guerrier(Case c);
+    Guerrier(vector<Case> c, Joueur j);
     virtual ~Guerrier();
 private:
 

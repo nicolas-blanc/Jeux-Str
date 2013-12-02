@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   Tour.h
  * Author: ponsma
  *
@@ -11,14 +11,14 @@
 #include "AttaqueDeBase.h"
 class Tour : public Batiment
 {
-    private : 
-        AttaqueDeBase m_atk;
-        
+    private :
+        AttaqueDeBase m_attaque;
+
     public :
-        Tour(AttaqueDeBase atk);
-        attaquer(Case c);
-        inline AttaqueDeBase getAtk(){return m_atk;}
-        inline void setAtk(AttaqueDeBase atk){m_atk = atk;}
+        Tour(vector<Case> ensCase, Joueur j, string nom);
+        void attaquer(Case c);
+        inline AttaqueDeBase getAttaque(){return m_attaque;}
+        inline void setAtttaque(AttaqueDeBase atk){m_attaque = atk;}
 };
 
 #endif	/* TOUR_H */

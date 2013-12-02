@@ -9,7 +9,7 @@ using namespace std;
 class AttaqueDeBase;
 class Unite : public Entite {
     public:
-        Unite(unsigned int mvt, unsigned int ct, unsigned int pop, int vie, int min, Case c);
+        Unite(unsigned int mvt, unsigned int ct, unsigned int pop, int vieMax, int vieMin, vector<Case> ensCase, Joueur j, string nom);
         virtual ~Unite();
         int getMouvement();
         inline void setMouvement(int val) { if (val >= 0) m_mouvement = val; } // a modif exception
@@ -19,14 +19,14 @@ class Unite : public Entite {
         inline void setPopulation(int val) { if (val >= 0) m_population = val; } // a modif exception
         inline AttaqueDeBase* getAttaqueParDefaut() { return m_AttaqueParDefaut; }
         inline Sort* getSort(int pos) { return &v_sort[pos]; }
-        virtual void initSort(); 
+        virtual void initSort();
 
         void deplacer(Case c);
         Case deplacement(Case c);
         void modifierVie(int vie);
         void attaquer(Case c, Attaque* attaque);
         void attaquer(Case c);
-        
+
         inline void insererEffet(Effet effet) { this->v_effet.push_back(effet); };
         void enleverEffet(Effet effet);
 
@@ -40,8 +40,8 @@ class Unite : public Entite {
         vector <Effet> v_effet;
 
     private:
-        inline int getDepX(Case c) { int dep = c.getX() - Entite::getPosition().getX(); if(dep < 0) return (-dep); else return dep; };
-        inline int getDepY(Case c) { int dep = c.getY() - Entite::getPosition().getY(); if(dep < 0) return (-dep); else return dep; };
+        inline int getDepX(Case c) { int dep = c.getX() - Entite::getPosition()[0].getX(); if(dep < 0) return (-dep); else return dep; };
+        inline int getDepY(Case c) { int dep = c.getY() - Entite::getPosition()[0].getY(); if(dep < 0) return (-dep); else return dep; };
 };
 #include "AttaqueDeBase.h"
 

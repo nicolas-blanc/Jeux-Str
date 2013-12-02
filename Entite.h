@@ -21,8 +21,8 @@ class Entite
         inline void Setnom(string val) { m_nom = val; }
         inline int getVie() { return m_vie.GetValeur(); }
         inline void setVie(int val) { m_vie.SetValeur(val); }
-        inline Case getPosition() { return m_position; }
-        inline void setPosition(Case val) { m_position = val; }
+        inline vector<Case> getPosition() { return m_position; }
+        inline void setPosition(Case val) {/* a modifier*/}
         inline void setJoueur(Joueur* j){ m_joueur = j;}
         inline Joueur* getJoueur(){return m_joueur;}
         void modifPV(int i);

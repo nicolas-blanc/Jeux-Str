@@ -1,7 +1,11 @@
 #include "Entite.h"
 
-Entite::Entite(int vie, int min, Case c)
-:m_vie(min,vie), m_position(c) {}
+Entite::Entite(vector<Case> ensCase, Joueur j, string nom, int vieMin, int vieMax)
+:m_vie(vieMax,vieMin), m_position(ensCase) {
+    setJoueur(&j);
+    Setnom(nom);
+
+}
 
 Entite::~Entite()
 {
@@ -9,5 +13,5 @@ Entite::~Entite()
 }
 
 void Entite::modifPV(int i) {
-    
+
 }

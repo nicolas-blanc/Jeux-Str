@@ -1,7 +1,7 @@
 #include "Unite.h"
 
-Unite::Unite(unsigned int mvt, unsigned int ct, unsigned int pop, int vie, int min, Case c) : Entite(vie,min,c)
-{
+Unite::Unite(unsigned int mvt, unsigned int ct, unsigned int pop, int vieMax, int vieMin, vector<Case> ensCase, Joueur j, string nom)
+: Entite(ensCase,j,nom,vieMin,vieMax) {
     this->setMouvement(mvt);
     this->setCout(ct);
     this->setPopulation(pop);
@@ -12,7 +12,7 @@ Case Unite::deplacement(Case c) {
     if(dep < this->m_mouvement)
         return c;
     else
-        return this->m_position;
+        return this->m_position[0];
 }
 
 void Unite::modifierVie(int vie) {
@@ -32,16 +32,16 @@ void Unite::attaquer(Case c) {
 int Unite::getMouvement() {
     int mvt;
     mvt = m_mouvement; //+bonus
-    
+
     return mvt;
 }
 
 Unite::~Unite() {
-    
+
 }
 
 void Unite::initSort() {
-    
+
 }
 
-//Penser Ã  supprimer l'effet quand il arrive Ã  0 tours
+//Penser à supprimer l'effet quand il arrive à 0 tours
