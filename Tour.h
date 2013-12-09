@@ -1,10 +1,3 @@
-/*
- * File:   Tour.h
- * Author: ponsma
- *
- * Created on 25 novembre 2013, 17:09
- */
-
 #ifndef TOUR_H
 #define	TOUR_H
 #include "Batiment.h"

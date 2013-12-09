@@ -1,10 +1,3 @@
-/*
- * File:   Joueur.h
- * Author: blancn
- *
- * Created on 19 novembre 2013, 10:39
- */
-
 #ifndef JOUEUR_H
 #define	JOUEUR_H
 
@@ -30,10 +23,14 @@ public:
     inline void setListeBonusJoueur(int indice, int bonus){ m_listeBonusJoueur[indice] = bonus;}
     inline vector<int> getListeBonusJoueur() { return m_listeBonusJoueur; }
 
-    inline Batiment* getBatiment(string nomBatiment) { return m_Batiment[nomBatiment].find(); };
+    inline Batiment* getBatiment(string nomBatiment) { return v_Batiment[nomBatiment].find(); };
 
+    void ajouteUnite(Unite * unite);
+    void ajouteBatiment(Batiment * bat);
     void deleteUnite(Unite* unite);
     void deleteBatiment(Batiment* bat);
+
+    void ajouterBonus(int choix, int bonus);
 
     int& operator[] (unsigned int i) { return m_listeBonusJoueur[i]; };
 private:
@@ -41,7 +38,7 @@ private:
     int m_numero;
 
     int m_PtActionJoueur;
-    std::vector<int> m_listeBonusJoueur;
+    vector<int> m_listeBonusJoueur;
     // Vecteur des bonus pour le joueur
         // le 1er element correspond à un bonus de population
         // le 2e element correspond à un bonus de pointAction
@@ -50,8 +47,8 @@ private:
         // le 5e element correspond à un bonus de portée
         // le 6e element correspond à un bonus de mouvement
 
-    map <string,Unite> m_Unite;
-    map <string,Batiment> m_Batiment;
+    map <string,Unite> v_Unite;
+    map <string,Batiment> v_Batiment;
 };
 #include "Unite.h"
 #include "Batiment.h"

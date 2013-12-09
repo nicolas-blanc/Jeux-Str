@@ -2,20 +2,17 @@
 
 PointDeVie::PointDeVie(int mini, int maxi)
 {
-    this->SetMin(mini);
-    this->SetMax(maxi);
-    this->SetValeur(maxi);
+    m_Min mini;
+    m_Max = maxi;
+    m_Valeur = maxi;
+    m_bonus = 0;
 }
 
 void PointDeVie::modifVie(int val) {
     if ((this->GetValeur() + val) > this->GetMax())
-        this->SetValeur(this->GetMax());
+        m_Valeur = GetMax());
     else if ((this->GetValeur() + val) < this->GetMin())
-        this->SetValeur(this->GetMin());
+        m_Valeur = m_Min;
     else
         this->SetValeur(this->GetValeur() + val);
-}
-
-PointDeVie::~PointDeVie() {
-    
 }

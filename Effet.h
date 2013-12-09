@@ -1,10 +1,3 @@
-/* 
- * File:   Effet.h
- * Author: duclotw
- *
- * Created on 4 novembre 2013, 12:31
- */
-
 #ifndef EFFET_H
 #define	EFFET_H
 

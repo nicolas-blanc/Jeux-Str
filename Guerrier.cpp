@@ -1,10 +1,3 @@
-/*
- * File:   Guerrier.cpp
- * Author: blancn
- *
- * Created on 19 novembre 2013, 11:11
- */
-
 #include "Guerrier.h"
 #include "Unite.h"
 

@@ -5,6 +5,7 @@
 
 #include "Plateau.h"
 #include "Joueur.h"
+#include "ListeException.h"
 
 using namespace std;
 
@@ -17,8 +18,10 @@ class Jeux
         inline void setnbTour(int val) { m_nbTour = val; }
         inline int getnbJoueur() { return m_nbJoueur; }
 
-        void creerGraphiqueConsole();
+        void afficherGraphiqueConsole();
         void partieConsole();
+
+        bool testFinDeJeu();
 
         void afficherInfo(Unite * unite);
     protected:

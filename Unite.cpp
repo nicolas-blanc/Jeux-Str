@@ -7,6 +7,17 @@ Unite::Unite(unsigned int mvt, unsigned int ct, unsigned int pop, int vieMax, in
     this->setPopulation(pop);
 }
 
+void Unite::deplacer(Case c) {
+    Case nouveau = deplacement(c)
+    if (c != nouveau) {
+        nouveau.setCase(this); //Rajout de void setCase(Unite unite); -> Test de si la case n'est pas occupé, puis mettre a jour la case
+                                // appel d'une exception si la case est occupé (Pour sauté l'instruction suivante)
+                                // ou avec un booleen, je ne sais pas
+                                // Nicolas :-D
+        c.setCase(); // mettre a 0 la case
+    }
+}
+
 Case Unite::deplacement(Case c) {
     int dep = this->getDepX(c) + this->getDepY(c);
     if(dep < this->m_mouvement)
