@@ -17,8 +17,10 @@ class Jeux
         inline void setnbTour(int val) { m_nbTour = val; }
         inline int getnbJoueur() { return m_nbJoueur; }
 
-        void creerGraphique();
-        void partie();
+        void creerGraphiqueConsole();
+        void partieConsole();
+
+        void afficherInfo(Unite * unite);
     protected:
     private:
         bool m_FinDePartie;
