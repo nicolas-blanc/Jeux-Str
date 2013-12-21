@@ -15,7 +15,9 @@
       <itemPath>Effet.h</itemPath>
       <itemPath>Entite.h</itemPath>
       <itemPath>Guerrier.h</itemPath>
+      <itemPath>Jeux.h</itemPath>
       <itemPath>Joueur.h</itemPath>
+      <itemPath>ListeException.h</itemPath>
       <itemPath>Magicien.h</itemPath>
       <itemPath>Plateau.h</itemPath>
       <itemPath>PointDeVie.h</itemPath>
@@ -43,6 +45,7 @@
       <itemPath>Effet.cpp</itemPath>
       <itemPath>Entite.cpp</itemPath>
       <itemPath>Guerrier.cpp</itemPath>
+      <itemPath>Jeux.cpp</itemPath>
       <itemPath>Joueur.cpp</itemPath>
       <itemPath>Magicien.cpp</itemPath>
       <itemPath>Plateau.cpp</itemPath>
@@ -120,9 +123,15 @@
       </item>
       <item path="Guerrier.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Jeux.cpp" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Jeux.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Joueur.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Joueur.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListeException.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Magicien.cpp" ex="false" tool="0" flavor2="0">
       </item>
@@ -223,9 +232,15 @@
       </item>
       <item path="Guerrier.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="Jeux.cpp" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="Jeux.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="Joueur.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="Joueur.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="ListeException.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="Magicien.cpp" ex="false" tool="0" flavor2="0">
       </item>

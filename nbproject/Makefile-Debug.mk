@@ -46,6 +46,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Effet.o \
 	${OBJECTDIR}/Entite.o \
 	${OBJECTDIR}/Guerrier.o \
+	${OBJECTDIR}/Jeux.o \
 	${OBJECTDIR}/Joueur.o \
 	${OBJECTDIR}/Magicien.o \
 	${OBJECTDIR}/Plateau.o \
@@ -136,6 +137,11 @@ ${OBJECTDIR}/Guerrier.o: Guerrier.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Guerrier.o Guerrier.cpp
+
+${OBJECTDIR}/Jeux.o: Jeux.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Jeux.o Jeux.cpp
 
 ${OBJECTDIR}/Joueur.o: Joueur.cpp 
 	${MKDIR} -p ${OBJECTDIR}

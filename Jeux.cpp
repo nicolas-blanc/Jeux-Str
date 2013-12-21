@@ -30,17 +30,17 @@ void Jeux::partieConsole() {
         m_nbTour++;
         while (!(finDeTour)) {
             int choix = 0;
-            cout << "1. Invoquer une unité     2. Choisir une unité     3. Fin de tour" << endl;
+            cout << "1. Invoquer une unitÃ©     2. Choisir une unitÃ©     3. Fin de tour" << endl;
             cin >> choix;
             switch (choix) {
             case 1:
-                //Invoquer une unité
+                //Invoquer une unitï¿½
                 int unite = 0;
                 cout << "1. Guerrier  2. Chevalier  3. Archer  4. Voleur  5. Pretre  6. Mage  7.Annuler" << endl;
                 cin >> unite;
-                cout << "Donnez la coordonnée X autour de votre Chateau" << endl;
+                cout << "Donnez la coordonn2e X autour de votre Chateau" << endl;
                 cin >> x;
-                cout << "Donnez la coordonnée Y autour de votre Chateau" << endl;
+                cout << "Donnez la coordonn2e Y autour de votre Chateau" << endl;
                 cin >> y;
                 if (unite > 0 && unite < 7) {
                     m_Joueur[(m_nbTour%m_nbJoueur)]->getBatiment("Chateau")->invoque(unite,Plateau->getCase(x,y)); // a rajouter a plateau => Case * getCase(int x, int y);
@@ -48,10 +48,10 @@ void Jeux::partieConsole() {
                 }
                 break;
             case 2:
-                //Deplacer/Attaquer une unité
-                cout << "Donnez la coordonnée X de l'unité" << endl;
+                //Deplacer/Attaquer une unitï¿½
+                cout << "Donnez la coordonnÃ©e X de l'unitÃ©" << endl;
                 cin >> x;
-                cout << "Donnez la coordonnée Y de l'unité" << endl;
+                cout << "Donnez la coordonnÃ©e Y de l'unitÃ©" << endl;
                 cin >> y;
                 Unite * unite = Plateau->getUnite(x,y); // a rajouter a Plateau => Unite * getUnite(int x, int y); retourne null si pas d'unite ou si c'est un batiment
                 if (unite != NULL) {
@@ -62,9 +62,9 @@ void Jeux::partieConsole() {
                         cin >> choix2;
                         switch (choix2) {
                         case 1:
-                            cout << "Donnez la coordonnée X de l'unité" << endl;
+                            cout << "Donnez la coordonnÃ©e X de l'unitÃ©" << endl;
                             cin >> x;
-                            cout << "Donnez la coordonnée Y de l'unité" << endl;
+                            cout << "Donnez la coordonnÃ©e Y de l'unitÃ©" << endl;
                             cin >> y;
                             unite->attaquer(m_Plateau.getCase(x,y));
                             // declencher une exception si un chateau est mort
@@ -73,9 +73,9 @@ void Jeux::partieConsole() {
                             afficherGraphiqueConsole();
                             break;
                         case 2:
-                            cout << "Donnez la coordonnée X du nouvel endroit" << endl;
+                            cout << "Donnez la coordonnÃ©e X du nouvel endroit" << endl;
                             cin >> x;
-                            cout << "Donnez la coordonnée Y du nouvel endroit" << endl;
+                            cout << "Donnez la coordonnÃ©e Y du nouvel endroit" << endl;
                             cin >> y;
                             unite->deplacer(m_Plateau.getCase(x,y)); // Modif, voir la fonction dans Unite.cpp
                             afficherGraphiqueConsole();
