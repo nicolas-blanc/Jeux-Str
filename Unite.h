@@ -18,7 +18,7 @@ class Unite : public Entite {
         inline int getPopulation() { return m_population; }
         inline void setPopulation(int val) { if (val >= 0) m_population = val; } // a modif exception
         inline AttaqueDeBase* getAttaqueParDefaut() { return m_AttaqueParDefaut; }
-        inline Sort* getSort(int pos) { return &v_sort[pos]; }
+        inline Sort* getSort(string nomSort) { return v_sort[nomSort]; }
         virtual void initSort();
 
         void deplacer(Case c);
@@ -36,7 +36,7 @@ class Unite : public Entite {
         unsigned int m_cout;
         unsigned int m_population;
         AttaqueDeBase* m_AttaqueParDefaut;
-        map <string,Sort> v_sort;
+        map <string,Sort*> v_sort;
         vector <Effet> v_effet;
 
     private:

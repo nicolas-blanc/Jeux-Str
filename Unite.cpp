@@ -1,5 +1,5 @@
 #include "Unite.h"
-
+#include <exception>
 Unite::Unite(unsigned int mvt, unsigned int ct, unsigned int pop, int vieMax, int vieMin, vector<Case> ensCase, Joueur j, string nom)
 : Entite(ensCase,j,nom,vieMin,vieMax) {
     this->setMouvement(mvt);
@@ -8,28 +8,35 @@ Unite::Unite(unsigned int mvt, unsigned int ct, unsigned int pop, int vieMax, in
 }
 
 void Unite::deplacer(Case c) {
-    Case nouveau = deplacement(c)
-    if (c != nouveau) {
-        nouveau.setCase(this); //Rajout de void setCase(Unite unite); -> Test de si la case n'est pas occupé, puis mettre a jour la case
-                                // appel d'une exception si la case est occupé (Pour sauté l'instruction suivante)
+    Case nouveau = deplacement(c);
+    if (c.getX()!=nouveau.getX() && c.getY()!=nouveau.getY() && !nouveau.isOccupee()) 
+    {
+        nouveau.setCase(this); 
+        //Rajout de void setCase(Unite unite); -> Test de si la case n'est pas occupï¿½, puis mettre a jour la case
+                                // appel d'une exception si la case est occupï¿½ (Pour sautï¿½ l'instruction suivante)
                                 // ou avec un booleen, je ne sais pas
                                 // Nicolas :-D
-        c.setCase(); // mettre a 0 la case
+        c.setCase(NULL);
+        // mettre a 0 la case
+    }
+    else
+    {
+        cout << "case prise"<<endl;
     }
 }
 
 Case Unite::deplacement(Case c) {
-    int dep = this->getDepX(c) + this->getDepY(c);
-    if(dep < this->m_mouvement)
+    int dep = getDepX(c) + getDepY(c);
+    if(dep < m_mouvement)
         return c;
     else
-        return this->m_position[0];
+        return m_position[0];
 }
 
 void Unite::modifierVie(int vie) {
-    this->m_vie.modifVie(vie);
-    if (this->m_vie.estMort())
-        getJoueur()->deleteUnite(this);
+    m_vie.modifVie(vie);
+    if (m_vie.estMort())
+        this->getJoueur()->deleteUnite(this);
 }
 
 void Unite::attaquer(Case c, Attaque* attaque) {
@@ -55,4 +62,4 @@ void Unite::initSort() {
 
 }
 
-//Penser à supprimer l'effet quand il arrive à 0 tours
+//Penser ï¿½ supprimer l'effet quand il arrive ï¿½ 0 tours

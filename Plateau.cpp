@@ -23,7 +23,7 @@ Plateau::Plateau(string nomPlateau) {
     }
         
     /*lecture du fichier pour ajouter tous les batiments sur le plateau
-    /*tant que fichier pas fini*/ {
+    tant que fichier pas fini {
      //   int x,y;
     //    int type=0;
             //fichierPlateau.read((char*)&type, sizeof(int));
@@ -32,7 +32,7 @@ Plateau::Plateau(string nomPlateau) {
       //      plateau[x][y].
     //}
     
-}
+}*/
 }
 
 void Plateau::setPlateau() {
