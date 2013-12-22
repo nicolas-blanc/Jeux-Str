@@ -2,7 +2,10 @@
 #include <math.h>
 Tour::Tour(vector<Case> ensCase, Joueur j, string nom)
 : Batiment(ensCase, j, nom, 0, 10),
-m_attaque(5) {}
+m_attaque(5) 
+{
+    getJoueur().setBatiment(this);
+}
 
 void Tour::attaquer(Case c) {
     getAttaque().lancerAttaque(&c);
@@ -12,8 +15,8 @@ void Tour::attaquer(Case c) {
 void Tour::attaqueAuto()
 {
     Entite* danger_entite;
-    int distance;
-    int distance_danger;
+    float distance;
+    float distance_danger;
     vector<Entite*> entite_presentent;
     vector<Case> ma_position = getPosition();
     for(int x =0; x<ma_position[0].getX()+m_attaque.getPortee(); x++)

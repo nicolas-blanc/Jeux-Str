@@ -53,8 +53,8 @@ public :
 private :
     int m_couleur;
     int m_numero;
-    map<string, * Unite> v_Unite;
-    map<string, * Batiment> v_Batiment;
+    map<string, Unite* > v_Unite;
+    map<string, Batiment* > v_Batiment;
     int m_PtActionJoueur;
     vector<int> m_listeBonusJoueur;
     // Vecteur des bonus pour le joueur
