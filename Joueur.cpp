@@ -13,8 +13,3 @@ Joueur::Joueur(int couleur, int numero) {
 Joueur::~Joueur() {
 }
 
-void Joueur::deleteUnite(Unite* unite) {
-}
-
-void Joueur::deleteBatiment(Batiment* batiment) {
-}

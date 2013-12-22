@@ -1,8 +1,7 @@
 #include "Guerrier.h"
-#include "Unite.h"
 
-Guerrier::Guerrier(vector<Case> c, Joueur j)
-:Unite(5,2,1,5,0,c,j,"Guerrier")
+Guerrier::Guerrier(vector<Case> ensCase, Joueur j)
+:Unite(5,2,3,7,0,ensCase,j,"Guerrier")
 {
 }
 

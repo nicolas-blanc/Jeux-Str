@@ -1,23 +1,19 @@
+/* 
+ * File:   Chateau.h
+ * Author: MouaHH
+ *
+ * Created on 21 décembre 2013, 14:26
+ */
 
-#ifndef TOUR_H
-#define	TOUR_H
-
+#ifndef CHATEAU_H
+#define	CHATEAU_H
 #include "Batiment.h"
-#include "Case.h"
-#include "Joueur.h"
-#include "Chateau.h"
-#include "Archer.h"
-#include "Guerrier.h"
-#include "Chevalier.h"
 
-class Chateau : public Batiment {
-
-	public:
-		
-		Chateau(vector<Case> ensCase, Joueur j, string nom, int vieMin, int vieMax)
-		void invoque(int unit, Case c);
-		
+class Chateau : public Batiment
+{
+    Chateau(vector<Case> EnsCase, Joueur j, string nom);
+    void Invoquer(int unite, Case c);
 };
-	
-	
-#endif	/* TOUR_H */
+
+#endif	/* CHATEAU_H */
+

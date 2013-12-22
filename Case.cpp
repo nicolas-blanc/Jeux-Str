@@ -14,7 +14,7 @@ void Case::setOccupant(Entite* occ) {
 
 void Case::transmettreAttaque(int nbPV) {
     if (m_occupant!=NULL) {
-            m_occupant->modifPV(nbPV);
+            m_occupant->setVie(nbPV);
     }
 }
 
@@ -28,4 +28,10 @@ void Case::declencherEffets() {
         effets[i].getSort()->lancerAttaque(this);
         effets[i].decreaseTour();
     }
+}
+
+
+void Case::setCase(Entite* entite)
+{
+    m_occupant = entite;
 }

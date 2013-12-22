@@ -18,9 +18,11 @@ private :
 public :
         Case(int x, int y);
         void setOccupant(Entite* occ);
+        inline Entite* getOccupant() {return m_occupant;}
         void transmettreAttaque(int nbPV);
         bool isOccupee();
         void declencherEffets();
+        void setCase(Entite* entite);
         
         inline int getX() { return m_x; };
         inline int getY() { return m_y; };

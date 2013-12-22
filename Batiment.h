@@ -11,6 +11,8 @@ public:
 private:
 
 };
+
+
 #include "Entite.h"
 
 #endif	/* BATIMENT_H */
