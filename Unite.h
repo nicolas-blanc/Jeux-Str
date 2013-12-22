@@ -40,8 +40,8 @@ class Unite : public Entite {
         vector <Effet> v_effet;
 
     private:
-        inline int getDepX(Case c) { int dep = c.getX() - Entite::getPosition()[0].getX(); if(dep < 0) return (-dep); else return dep; };
-        inline int getDepY(Case c) { int dep = c.getY() - Entite::getPosition()[0].getY(); if(dep < 0) return (-dep); else return dep; };
+        inline int getDepX(Case c) { int dep = c.getX() - Entite::getPosition()[0].getX(); return abs(dep); };
+        inline int getDepY(Case c) { int dep = c.getY() - Entite::getPosition()[0].getY(); return abs(dep); };
 };
 #include "AttaqueDeBase.h"
 
