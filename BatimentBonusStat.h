@@ -1,9 +1,12 @@
 #ifndef BATIMENTBONUSSTAT_H
 #define BATIMENTBONUSSTAT_H
 
-#include "Batiment.h"
 #include <stdlib.h>
-using std::vector;
+#include <vector>
+
+#include "Batiment.h"
+
+using namespace std;
 
 class BatimentBonusStat : public Batiment
 {

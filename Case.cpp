@@ -6,15 +6,17 @@ Case::Case(int x, int y) {
     m_x=x;
     m_y=y;
     m_occupant=NULL;
+    m_batiment = false;
 }
 
-void Case::setOccupant(Entite* occ) {
+void Case::setOccupant(Entite* occ, bool bat) {
     m_occupant = occ;
+    m_batiment = bat;
 }
 
 void Case::transmettreAttaque(int nbPV) {
     if (m_occupant!=NULL) {
-            m_occupant->setVie(nbPV);
+            m_occupant->getVie()->
     }
 }
 

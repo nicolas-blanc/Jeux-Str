@@ -3,27 +3,37 @@
 
 #include <iostream>
 #include <string>
+
 using namespace std;
 
-
 class Case;
+class Entite;
+
 class Attaque {
 protected:
     int m_Degat;
     int m_Portee;
     int m_PtAction;
+    Entite * m_Entite;
+
+private:
+    bool portee(Case* c);
+
 public:
     Attaque(int portee, int degat = 1, int ptAction = 1);
-    void Attaquer();
     inline void setDegat(int degat) { m_Degat = degat;};
     inline int getDegat() { return m_Degat;};
     inline void setPortee(int portee) { m_Portee = portee; };
     inline int getPortee() { return m_Portee; };
     inline void setPtAction(int ptAction) { m_PtAction = ptAction; };
     inline int getPtAction() { return m_PtAction; };
-    
-    virtual void lancerAttaque(Case* c); //C'est une fonction virtuelle pure --> classe abstraite
+
+    virtual void lancerAttaque(Case* c);
+    void Attaquer();
+    void lierEntite(Entite* ent) { m_Entite = ent; }
 };
+
+#include "Entite.h"
 #include "Case.h"
 
 #endif	/* ATTAQUE_H */

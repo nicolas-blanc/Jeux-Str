@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   Pretre.h
  * Author: MouaHH
  *
@@ -7,6 +7,7 @@
 
 #ifndef PRETRE_H
 #define	PRETRE_H
+
 #include "Unite.h"
 
 class Pretre : public Unite

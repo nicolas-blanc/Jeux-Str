@@ -2,17 +2,17 @@
 #define ENTITE_H
 
 #include <string>
-
 #include <iomanip>
+#include <vector>
 
-#include "Attaque.h"
-#include "Case.h"
 #include "PointDeVie.h"
-#include "vector"
 
 using namespace std;
 
+class Attaque;
+class Case;
 class Joueur;
+
 class Entite
 {
     public:
@@ -23,10 +23,11 @@ class Entite
         inline int getVie() { return m_vie.GetValeur(); }
         inline void setVie(int val) { m_vie.modifVie(val); }
         inline vector<Case> getPosition() { return m_position; }
-        inline void setPosition(Case val) {/* a modifier*/}
+        inline void setPosition(vector<Case> position) { m_position = position; }
         inline void setJoueur(Joueur* j) {m_Joueur=j;}
         inline Joueur* getJoueur() {return m_Joueur;}
 
+//        int& operator[] (unsigned int i) { return m_position[i]; };
     protected:
         string m_nom;
         PointDeVie m_vie;
@@ -34,5 +35,8 @@ class Entite
         Joueur* m_Joueur;
 };
 
+#include "Attaque.h"
+#include "Case.h"
 #include "Joueur.h"
+
 #endif // ENTITE_H

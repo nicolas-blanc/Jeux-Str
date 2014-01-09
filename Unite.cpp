@@ -5,13 +5,19 @@ Unite::Unite(unsigned int mvt, unsigned int ct, unsigned int pop, int vieMax, in
     this->setMouvement(mvt);
     this->setCout(ct);
     this->setPopulation(pop);
+    this->setAttaqueDeBase();
+}
+
+void Unite::setAttaqueDeBase() {
+    m_AttaqueParDefaut = new AttaqueDeBase();
+    m_AttaqueParDefaut->lierEntite(this);
 }
 
 void Unite::deplacer(Case c) {
     Case nouveau = deplacement(c);
-    if (c.getX()!=nouveau.getX() && c.getY()!=nouveau.getY() && !nouveau.isOccupee()) 
+    if (c.getX()!=nouveau.getX() && c.getY()!=nouveau.getY() && !nouveau.isOccupee())
     {
-        nouveau.setCase(this); 
+        nouveau.setCase(this);
         //Rajout de void setCase(Unite unite); -> Test de si la case n'est pas occup�, puis mettre a jour la case
                                 // appel d'une exception si la case est occup� (Pour saut� l'instruction suivante)
                                 // ou avec un booleen, je ne sais pas

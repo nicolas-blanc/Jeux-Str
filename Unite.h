@@ -3,10 +3,13 @@
 
 #include "Entite.h"
 #include "Effet.h"
+#include "Attaque.h"
+
 #include <vector>
+#include <cmath>
 
 using namespace std;
-class AttaqueDeBase;
+
 class Unite : public Entite {
     public:
         Unite(unsigned int mvt, unsigned int ct, unsigned int pop, int vieMax, int vieMin, vector<Case> ensCase, Joueur j, string nom);
@@ -36,13 +39,13 @@ class Unite : public Entite {
         unsigned int m_cout;
         unsigned int m_population;
         AttaqueDeBase* m_AttaqueParDefaut;
-        map <string,Sort*> v_sort;
+//        map <string,Sort*> v_sort;
         vector <Effet> v_effet;
 
     private:
         inline int getDepX(Case c) { int dep = c.getX() - Entite::getPosition()[0].getX(); return abs(dep); };
         inline int getDepY(Case c) { int dep = c.getY() - Entite::getPosition()[0].getY(); return abs(dep); };
+        void setAttaqueDeBase();
 };
-#include "AttaqueDeBase.h"
 
 #endif // UNITE_H

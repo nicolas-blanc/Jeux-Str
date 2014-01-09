@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   Chateau.h
  * Author: MouaHH
  *
@@ -7,6 +7,7 @@
 
 #ifndef CHATEAU_H
 #define	CHATEAU_H
+
 #include "Batiment.h"
 
 class Chateau : public Batiment

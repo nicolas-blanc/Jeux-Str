@@ -1,5 +1,6 @@
 #ifndef TOUR_H
 #define	TOUR_H
+
 #include "Batiment.h"
 #include "AttaqueDeBase.h"
 

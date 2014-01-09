@@ -18,4 +18,17 @@ public:
     FinDeJeu() {}
 };
 
+class ManquePtAction : public ListeException
+{
+public:
+    ManquePtAction() {}
+    const char * what() const throw () { return "Le joueur n'a pas assez de ptAction"; }
+};
+
+class ManquePorte : public ListeException
+{
+public:
+    ManquePorte() {}
+    const char * what() const throw () { return "L'unite n'a pas assez de Portee"; }
+};
 #endif // LISTEEXCEPTION_H

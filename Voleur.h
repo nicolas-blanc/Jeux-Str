@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   Voleur.h
  * Author: MouaHH
  *
@@ -7,6 +7,7 @@
 
 #ifndef VOLEUR_H
 #define	VOLEUR_H
+
 #include "Unite.h"
 
 class Voleur : public Unite

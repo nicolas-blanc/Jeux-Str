@@ -1,7 +1,11 @@
 #ifndef SORT_H
 #define	SORT_H
 
+#include <string>
+
 #include "Attaque.h"
+
+using namespace std;
 
 class Sort : public Attaque {
 public:
@@ -12,7 +16,5 @@ private:
     string m_nomSort;
     int zone;
 };
-
-
 #endif	/* SORT_H */
 
