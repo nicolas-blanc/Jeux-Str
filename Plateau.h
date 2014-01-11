@@ -25,6 +25,9 @@ public :
         // retourne null si pas d'unite ou si c'est un batiment
         inline Case * getCase(int x, int y) { return plateau[x][y]; }
         inline void ajoutBatiment(Batiment * bat) { v_Batiment.push_back(bat); }
+
+        inline int getLargeur() { return m_largeur; }
+        inline int getLongeur() { return m_longeur; }
 };
 
 #endif

@@ -20,6 +20,16 @@ Jeux::~Jeux()
 
 void Jeux::afficherGraphiqueConsole() {
     // redessinner le plateau + info sur joueur (PA, Pop, num Joueur)
+    for (int y = 0; i < m_Plateau->getLargeur(); i++) {
+        if (y % 2 = 0)
+            dessinerLigne();
+        else
+            for (int x = 0; i < m_Plateau->getLongeur(); i++) {
+                if (y == 0) {
+                    cout << "|";
+                }
+            }
+    }
 }
 
 void Jeux::partieConsole() {
