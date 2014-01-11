@@ -9,9 +9,17 @@
 #define	CHATEAU_H
 
 #include "Batiment.h"
+#include "Unite.h"
+#include "Guerrier.h"
+#include "Archer.h"
+#include "Chevalier.h"
+#include "Magicien.h"
+#include "Pretre.h"
+#include "Voleur.h"
 
 class Chateau : public Batiment
 {
+    public:
     Chateau(vector<Case> EnsCase, Joueur j, string nom);
     void Invoquer(int unite, Case c);
 };

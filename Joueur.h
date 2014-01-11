@@ -8,6 +8,7 @@
 using namespace std;
 
 class Entite;
+class Unite;
 class Batiment;
 
 class Joueur {
@@ -22,13 +23,14 @@ public :
 
     inline void setPtAction(int val) { m_PtActionJoueur = val; }
     inline void setListeBonusJoueur(int indice, int bonus) { m_listeBonusJoueur[indice] = bonus; }
-    inline void setBatiment(Batiment * batiment) { v_Batiment[batiment->Getnom()] = batiment; }
-    inline void setUnite(Unite * unite) { v_Unite[unite->Getnom()] = unite; }
+    void setBatiment(Batiment * batiment);
+    void setUnite(Unite * unite);
 
-    inline void deleteBatiment(Batiment* bat) { v_Batiment.erase(bat->Getnom()); }
-    inline void deleteUnite(Unite * unite) { v_Unite.erase(unite->Getnom()); }
+    void deleteBatiment(Batiment* bat);
+    void deleteUnite(Unite * unite);
 
     int& operator[] (unsigned int i) {return m_listeBonusJoueur[i];};
+    bool operator== (Joueur j) {return m_numero==j.getNumero();};
 private :
     int m_couleur;
     int m_numero;
@@ -48,6 +50,7 @@ private :
 };
 
 #include "Entite.h"
+#include "Unite.h"
 #include "Batiment.h"
 
 #endif	/* JOUEUR_H */

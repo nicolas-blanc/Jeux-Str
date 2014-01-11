@@ -5,18 +5,18 @@
 #include <string>
 #include <vector>
 
-#include "Effet.h"
 
 using namespace std;
 
 class Entite;
 class Unite;
+class Effet;
 
 class Case {
 private :
         Entite* m_occupant;
         bool m_batiment;
-        vector<Effet> m_effets;
+        vector<Effet*> m_effets;
         int m_x;
         int m_y;
 public :
@@ -35,5 +35,6 @@ public :
 
 #include "Entite.h"
 #include "Unite.h"
+#include "Effet.h"
 
 #endif

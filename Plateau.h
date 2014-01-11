@@ -21,7 +21,7 @@ public :
         void setPlateau();
         ~Plateau();
 
-        inline Unite * getEntite(int x, int y) { return (Unite) plateau[x][y]->getOccupant(); }
+        inline Entite * getEntite(int x, int y) { return plateau[x][y]->getOccupant(); }
         // retourne null si pas d'unite ou si c'est un batiment
         inline Case * getCase(int x, int y) { return plateau[x][y]; }
         inline void ajoutBatiment(Batiment * bat) { v_Batiment.push_back(bat); }

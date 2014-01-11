@@ -5,7 +5,8 @@
 
 class Archer : public Unite
 {
-    Archer(vector<Case> ensCase, Joueur j);
+    public:
+    Archer(vector<Case> ensCase, Joueur* j);
 };
 #endif	/* ARCHER_H */
 

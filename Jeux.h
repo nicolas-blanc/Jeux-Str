@@ -23,7 +23,7 @@ class Jeux
 
         bool testFinDeJeu();
 
-        void afficherInfo(Unite * unite);
+        void afficherInfos(Unite * unite);
     protected:
     private:
         bool m_FinDePartie;
@@ -31,7 +31,7 @@ class Jeux
         int m_nbJoueur;
 
         vector <Joueur*> m_Joueur;
-        Plateau *m_Plateau;
+        Plateau* m_Plateau;
 };
 
 #endif // JEUX_H

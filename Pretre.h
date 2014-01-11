@@ -12,7 +12,8 @@
 
 class Pretre : public Unite
 {
-    Pretre(vector<Case> ensCase, Joueur j);
+    public:
+    Pretre(vector<Case> ensCase, Joueur* j);
 };
 
 

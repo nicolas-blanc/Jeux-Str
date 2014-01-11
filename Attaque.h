@@ -15,10 +15,7 @@ protected:
     int m_Portee;
     int m_PtAction;
     Entite * m_Entite;
-
-private:
-    bool portee(Case* c);
-
+    
 public:
     Attaque(int portee, int degat = 1, int ptAction = 1);
     inline void setDegat(int degat) { m_Degat = degat;};

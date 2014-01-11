@@ -12,7 +12,8 @@
 
 class Magicien : public Unite
 {
-    Magicien(vector<Case> ensCase, Joueur j);
+    public:
+    Magicien(vector<Case> ensCase, Joueur* j);
 };
 
 

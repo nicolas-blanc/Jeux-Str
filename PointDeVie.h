@@ -12,7 +12,6 @@ class PointDeVie
         inline void SetValeur(int val) {m_Valeur = val;}
 
         void modifVie(int val);
-        inline bool estMort() { return m_Valeur == 0;};
     protected:
     private:
         int m_Min;

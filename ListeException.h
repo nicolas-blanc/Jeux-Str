@@ -25,10 +25,10 @@ public:
     const char * what() const throw () { return "Le joueur n'a pas assez de ptAction"; }
 };
 
-class ManquePorte : public ListeException
+class ManquePortee : public ListeException
 {
 public:
-    ManquePorte() {}
+    ManquePortee() {}
     const char * what() const throw () { return "L'unite n'a pas assez de Portee"; }
 };
 #endif // LISTEEXCEPTION_H

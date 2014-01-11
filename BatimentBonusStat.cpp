@@ -69,7 +69,7 @@ void BatimentBonusStat::randomStat() {
 
 void BatimentBonusStat::changementProprio(Joueur j) {
     Entite::setJoueur(&j);
-    getJoueur().setBatiment(this);
+    getJoueur()->setBatiment(this);
     if(getStat()>1)
         randomStat();
 

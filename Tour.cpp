@@ -4,7 +4,7 @@ Tour::Tour(vector<Case> ensCase, Joueur j, string nom)
 : Batiment(ensCase, j, nom, 0, 10),
 m_attaque(5) 
 {
-    getJoueur().setBatiment(this);
+    getJoueur()->setBatiment(this);
 }
 
 void Tour::attaquer(Case c) {

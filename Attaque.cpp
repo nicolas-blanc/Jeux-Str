@@ -4,6 +4,7 @@ Attaque::Attaque(int portee, int degat, int ptAction) {
     m_Degat = degat;
     m_Portee = portee;
     m_PtAction = ptAction;
+    m_Entite = NULL;
 }
 
 /*void Attaque::lancerAttaque(Case* c){
@@ -25,14 +26,5 @@ Attaque::Attaque(int portee, int degat, int ptAction) {
 */
 
 void Attaque::lancerAttaque(Case* c) {
-    if (m_Entite->getJoueur()->getPtAction() - m_ptAction => 0) {
-        if (portee) {
-            c.transmettreAttaque(m_Degat);
-        } else throw ManquePortee;
-    } else throw ManquePtAction;
-}
-
-void Attaque::portee(Case* c) {
-    cE = m_Entite->getPosition()[0];
-    return ((abs(c->getX() - cE->getX()) + abs(c->getY() - cE->getY())) <= m_Portee);
+    c->transmettreAttaque(m_Degat);
 }

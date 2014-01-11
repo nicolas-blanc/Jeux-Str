@@ -1,17 +1,17 @@
 #ifndef EFFET_H
 #define	EFFET_H
 
-#include "Sort.h"
-
+class Sort;
 class Effet {
     private :
         int nbTour;
-//        Sort* m_sort;
+        Sort* m_sort;
     public :
-        Effet(/*Sort sort,*/ int tour);
+        Effet(Sort sort, int tour);
         void decreaseTour();
-//        inline Sort* getSort(){return m_sort;};
+        inline Sort* getSort(){return m_sort;};
 };
+#include "Sort.h"
 
 #endif	/* EFFET_H */
 

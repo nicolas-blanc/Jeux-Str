@@ -12,7 +12,8 @@
 
 class Chevalier : public Unite
 {
-    Chevalier(vector<Case> ensCase, Joueur j);
+    public:
+    Chevalier(vector<Case> ensCase, Joueur* j);
 };
 
 

@@ -1,6 +1,7 @@
 #include "Unite.h"
+#include "ListeException.h"
 #include <exception>
-Unite::Unite(unsigned int mvt, unsigned int ct, unsigned int pop, int vieMax, int vieMin, vector<Case> ensCase, Joueur j, string nom)
+Unite::Unite(unsigned int mvt, unsigned int ct, unsigned int pop, int vieMax, int vieMin, vector<Case> ensCase, Joueur* j, string nom)
 : Entite(ensCase,j,nom,vieMin,vieMax) {
     this->setMouvement(mvt);
     this->setCout(ct);
@@ -32,7 +33,7 @@ void Unite::deplacer(Case c) {
 }
 
 Case Unite::deplacement(Case c) {
-    int dep = getDepX(c) + getDepY(c);
+    int dep = 0;//getDepX(c) + getDepY(c);
     if(dep < m_mouvement)
         return c;
     else
@@ -40,12 +41,21 @@ Case Unite::deplacement(Case c) {
 }
 
 void Unite::modifierVie(int vie) {
-    m_vie.modifVie(vie);
-    if (m_vie.estMort())
+    Entite::modifierVie(vie);
+    if (estMort())
         this->getJoueur()->deleteUnite(this);
 }
 
 void Unite::attaquer(Case c, Attaque* attaque) {
+    if (getJoueur()->getPtAction()<attaque->getPtAction()) {
+        ManquePtAction ex;
+        throw ex;
+    }
+    Case cE = getPosition()[0];
+    if ((abs(c.getX() - cE.getX()) + abs(c.getY() - cE.getY())) <= attaque->getPortee()) {
+        ManquePortee ex;
+        throw ex;
+    }
     attaque->lancerAttaque(&c);
 }
 

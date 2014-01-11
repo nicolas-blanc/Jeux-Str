@@ -12,7 +12,8 @@
 
 class Voleur : public Unite
 {
-    Voleur(vector<Case> ensCase, Joueur j);
+    public:
+    Voleur(vector<Case> ensCase, Joueur* j);
 };
 
 
