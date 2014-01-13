@@ -37,3 +37,10 @@ void Case::setCase(Entite* entite)
 {
     m_occupant = entite;
 }
+
+void Case::dessinerCase() {
+    if ( m_occupant == NULL )
+        cout << "   |";
+    else
+        m_occupant->dessinerEntite();
+}

@@ -31,6 +31,8 @@ public :
 
         inline int getX() { return m_x; };
         inline int getY() { return m_y; };
+
+        void dessinerCase();
 };
 
 #include "Entite.h"

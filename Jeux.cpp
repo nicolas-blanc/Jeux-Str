@@ -20,15 +20,18 @@ Jeux::~Jeux()
 
 void Jeux::afficherGraphiqueConsole() {
     // redessinner le plateau + info sur joueur (PA, Pop, num Joueur)
-    for (int y = 0; i < m_Plateau->getLargeur(); i++) {
-        if (y % 2 = 0)
+    for (int y = 0; y < m_Plateau->getLargeur(); y++) {
+        if (y % 2 == 0)
             dessinerLigne();
-        else
-            for (int x = 0; i < m_Plateau->getLongeur(); i++) {
-                if (y == 0) {
+        else {
+            for (int x = 0; x < m_Plateau->getLongeur(); x++) {
+                if (x == 0)
                     cout << "|";
-                }
+                else
+                    m_Plateau->getCase(x,y)->dessinerCase();
             }
+            cout << endl;
+        }
     }
 }
 

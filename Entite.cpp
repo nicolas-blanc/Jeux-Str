@@ -14,3 +14,7 @@ Entite::~Entite()
 void Entite::modifierVie(int vie) {
     m_vie.modifVie(vie);
 }
+
+void Entite::dessinerEntite() {
+    cout << " E |";
+}

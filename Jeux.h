@@ -32,6 +32,8 @@ class Jeux
 
         vector <Joueur*> m_Joueur;
         Plateau* m_Plateau;
+
+        inline void dessinerLigne() { cout << "+ - + - + - + - + - + - + - + - + - + - +" << endl; }
 };
 
 #endif // JEUX_H

@@ -12,7 +12,7 @@ using namespace std;
 class Plateau {
 private :
         int m_largeur;
-        int m_longueur;
+        int m_longeur;
         Case*** plateau;
 
         vector<Batiment *> v_Batiment;

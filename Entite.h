@@ -27,9 +27,10 @@ class Entite
         inline void setJoueur(Joueur* j) {m_Joueur=j;}
         inline Joueur* getJoueur() {return m_Joueur;}
         void modifierVie(int vie);
-        inline bool estMort() { return m_vie.GetValeur() == 0;};
+        inline bool estMort() { return m_vie.GetValeur() == 0; }
+        void dessinerEntite();
 
-//        int& operator[] (unsigned int i) { return m_position[i]; };
+        Case& operator[] (unsigned int i) { return m_position[i]; };
     protected:
         string m_nom;
         PointDeVie m_vie;
