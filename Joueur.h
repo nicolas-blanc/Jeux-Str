@@ -5,6 +5,8 @@
 #include <map>
 #include <string>
 
+#include "ListeException.h"
+
 using namespace std;
 
 class Entite;
@@ -18,11 +20,16 @@ public :
     inline int getCouleur() { return m_couleur; }
     inline int getNumero() { return m_numero; }
     inline int getPtAction() { return m_PtActionJoueur; }
+    inline int getPopulation() { return m_Population; }
+    inline int getPtActionMax() { return m_PtActionMax + m_listeBonusJoueur[1]; }
+    inline int getPopMax() { return m_PopMax + m_listeBonusJoueur[0]; }
     inline vector<int> getListeBonusJoueur() { return m_listeBonusJoueur; }
+    inline int getListeBonusJoueur(int val) { return m_listeBonusJoueur[val]; }
     inline Batiment* getBatiment(string nomBatiment) { return v_Batiment[nomBatiment]; }
 
-    inline void setPtAction(int val) { m_PtActionJoueur = val; }
+    inline void setPtAction(int val) { if (val < getPtActionMax() || val > 0) m_PtActionJoueur = val; else { PtAction ex; throw ex; } }
     inline void setListeBonusJoueur(int indice, int bonus) { m_listeBonusJoueur[indice] = bonus; }
+    inline void setPopulation(int val) { if (val < getPopMax() || val > 0) m_Population = val; else { Population ex; throw ex; } }
     void setBatiment(Batiment * batiment);
     void setUnite(Unite * unite);
 
@@ -36,7 +43,10 @@ private :
     int m_numero;
     map<string, Unite * > v_Unite;
     map<string, Batiment* > v_Batiment;
+    int m_PtActionMax;
     int m_PtActionJoueur;
+    int m_PopMax;
+    int m_Population;
     vector<int> m_listeBonusJoueur;
     // Vecteur des bonus pour le joueur
         // le 1er element correspond à un bonus de population

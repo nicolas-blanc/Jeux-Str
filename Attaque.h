@@ -15,13 +15,13 @@ protected:
     int m_Portee;
     int m_PtAction;
     Entite * m_Entite;
-    
+
 public:
     Attaque(int portee, int degat = 1, int ptAction = 1);
     inline void setDegat(int degat) { m_Degat = degat;};
-    inline int getDegat() { return m_Degat;};
+    inline int getDegat() { return m_Degat/* + m_Entite->getJoueur()->getListeBonusJoueur(3)*/; };
     inline void setPortee(int portee) { m_Portee = portee; };
-    inline int getPortee() { return m_Portee; };
+    inline int getPortee() { return m_Portee/* + m_Entite->getJoueur()->getListeBonusJoueur(4)*/; };
     inline void setPtAction(int ptAction) { m_PtAction = ptAction; };
     inline int getPtAction() { return m_PtAction; };
 

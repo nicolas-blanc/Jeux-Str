@@ -33,6 +33,7 @@ void Jeux::afficherGraphiqueConsole() {
             cout << endl;
         }
     }
+    cout << "Joueur " << m_nbTour%m_nbJoueur+1 << "Population restante : " << m_Joueur[m_nbTour%m_nbJoueur]->getPopulation() << "Points actions restants : " << m_Joueur[m_nbTour%m_nbJoueur]->getPtAction() << endl;
 }
 
 void Jeux::partieConsole() {
@@ -42,6 +43,7 @@ void Jeux::partieConsole() {
     bool finDeTour = false;
     while (!(m_FinDePartie)) {
         m_nbTour++;
+        afficherGraphiqueConsole();
         while (!(finDeTour)) {
             int choix = 0;
             cout << "1. Invoquer une unité     2. Choisir une unité     3. Fin de tour" << endl;
@@ -57,8 +59,10 @@ void Jeux::partieConsole() {
                 cout << "Donnez la coordonn2e Y autour de votre Chateau" << endl;
                 cin >> y;
                 if (unit > 0 && unit < 7) {
-                    ((Chateau*)m_Joueur[(m_nbTour%m_nbJoueur)]->getBatiment("Chateau"))->Invoquer(unit,*m_Plateau->getCase(x,y)); // a rajouter a plateau => Case * getCase(int x, int y);
-                    afficherGraphiqueConsole();
+                    try {
+                        ((Chateau*)m_Joueur[(m_nbTour%m_nbJoueur)]->getBatiment("Chateau"))->Invoquer(unit,*m_Plateau->getCase(x,y)); // a rajouter a plateau => Case * getCase(int x, int y);
+                        afficherGraphiqueConsole();
+                    } catch(ManquePopulation mP) { cout << "Vous n'avez pas assez de points de population" << endl;}
                 }
                 break;}
             case 2:{
@@ -80,11 +84,14 @@ void Jeux::partieConsole() {
                             cin >> x;
                             cout << "Donnez la coordonnée Y de l'unité" << endl;
                             cin >> y;
-                            u->attaquer(*m_Plateau->getCase(x,y));
-                            // declencher une exception si un chateau est mort
-                            if (testFinDeJeu())
-                                throw FinDeJeu();
-                            afficherGraphiqueConsole();
+                            try {
+                                u->attaquer(*m_Plateau->getCase(x,y));
+                                // declencher une exception si un chateau est mort
+                                if (testFinDeJeu())
+                                    throw FinDeJeu();
+                                afficherGraphiqueConsole();
+                            } catch (ManquePtAction mP) { cout << "Vous n'avez pas assez de pt d'action pour réliaser cette action" << endl; }
+                            catch (ManquePortee mP) { cout << "Vous n'avez pas assez de portée pour realiser l'action" << endl; }
                             break;
                         case 2:
                             cout << "Donnez la coordonnée X du nouvel endroit" << endl;
@@ -111,7 +118,7 @@ void Jeux::partieConsole() {
     }
 }
 
-void Jeux::afficherInfos(Unite * unite) {
+void Jeux::afficherInfos(Unite * unit) {
     //affiche en console les informations
     cout << 1 << endl;
 }

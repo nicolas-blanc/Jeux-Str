@@ -13,18 +13,18 @@ Joueur::Joueur(int couleur, int numero) {
 Joueur::~Joueur() {
 }
 
-void Joueur::setBatiment(Batiment * batiment) { 
-    v_Batiment[batiment->Getnom()] = batiment; 
+void Joueur::setBatiment(Batiment * batiment) {
+    v_Batiment[batiment->Getnom()] = batiment;
 }
 
 void Joueur::setUnite(Unite * unite) {
-    v_Unite[unite->Getnom()] = unite; 
+    v_Unite[unite->Getnom()] = unite;
 }
 
-void Joueur::deleteBatiment(Batiment* bat) { 
-    v_Batiment.erase(bat->Getnom()); 
+void Joueur::deleteBatiment(Batiment* bat) {
+    v_Batiment.erase(bat->Getnom());
 }
 
 void Joueur::deleteUnite(Unite * unite) {
-    v_Unite.erase(unite->Getnom()); 
+    v_Unite.erase(unite->Getnom());
 }

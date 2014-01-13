@@ -20,7 +20,7 @@ class Unite : public Entite {
     public:
         Unite(unsigned int mvt, unsigned int ct, unsigned int pop, int vieMax, int vieMin, vector<Case> ensCase, Joueur* j, string nom);
         virtual ~Unite();
-        int getMouvement();
+        inline int getMouvement() { return m_mouvement/* + getJoueur()->getListeBonusJoueur(5)*/; }
         inline void setMouvement(int val) { if (val >= 0) m_mouvement = val; } // a modif exception
         inline int getCout() { return m_cout; }
         inline void setCout(int val) { if (val >= 0) m_cout = val; } // a modif exception

@@ -60,14 +60,16 @@ void Unite::attaquer(Case c, Attaque* attaque) {
 }
 
 void Unite::attaquer(Case c) {
+    if (getJoueur()->getPtAction()<m_AttaqueParDefaut->getPtAction()) {
+        ManquePtAction ex;
+        throw ex;
+    }
+    Case cE = getPosition()[0];
+    if ((abs(c.getX() - cE.getX()) + abs(c.getY() - cE.getY())) <= m_AttaqueParDefaut->getPortee()) {
+        ManquePortee ex;
+        throw ex;
+    }
     m_AttaqueParDefaut->lancerAttaque(&c);
-}
-
-int Unite::getMouvement() {
-    int mvt;
-    mvt = m_mouvement; //+bonus
-
-    return mvt;
 }
 
 Unite::~Unite() {
