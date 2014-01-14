@@ -20,7 +20,7 @@
 class Chateau : public Batiment
 {
     public:
-    Chateau(vector<Case> EnsCase, Joueur j, string nom);
+    Chateau(vector<Case *> EnsCase, string nom);
     void Invoquer(int unite, Case c);
 };
 

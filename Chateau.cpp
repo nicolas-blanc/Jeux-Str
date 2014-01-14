@@ -1,11 +1,8 @@
 #include "Chateau.h"
 #include <math.h>
 
-Chateau::Chateau(vector<Case> EnsCase, Joueur j, string nom) : Batiment(EnsCase, j, nom, 0, 20)
-{
-    getJoueur()->setBatiment(this);
-    //a revoir je sais pas si possible;
-}
+Chateau::Chateau(vector<Case *> EnsCase, string nom) : Batiment(EnsCase, nom, 0, 20)
+{}
 
 void Chateau::Invoquer(int unite, Case c)
 {
@@ -15,18 +12,18 @@ void Chateau::Invoquer(int unite, Case c)
     {
         for(int y = 0; y<4; y++)
         {
-         distance = sqrt(((this->getPosition()[x].getX()
+         distance = sqrt(((this->getPosition()[x]->getX()
                 -c.getX())^2)+
-                ((this->getPosition()[y].getY()
-                -c.getY())^2)); 
+                ((this->getPosition()[y]->getY()
+                -c.getY())^2));
          if((distance == 1.0 || distance == sqrt(2)) && !c.isOccupee())
              invoc_possible = true;
         }
     }
-    vector<Case> ensCase;
-    ensCase.push_back(c);
+    vector<Case *> ensCase;
+    ensCase.push_back(&c);
     Unite* u;
-    
+
     switch(unite)
     {
         case 1: {
@@ -48,6 +45,21 @@ void Chateau::Invoquer(int unite, Case c)
             u = new Voleur(ensCase, getJoueur());
             break;}
     }
-    getJoueur()->setUnite(u); 
-            
+
+    if(this->getJoueur()->getPopulation() >= u->getPopulation() || this->getJoueur()->getPtAction() >= u->getCout())
+    {
+        getJoueur()->setUnite(u);
+        this->getJoueur()->modifPopulation(u->getPopulation());
+        this->getJoueur()->modifPtAction(u->getCout());
+    }
+    else
+    {
+        delete(u);
+        if(getJoueur()->getPopulation() >= u->getPopulation())
+            throw ManquePopulation();
+        else
+            throw ManquePtAction();
+    }
+
+
 }

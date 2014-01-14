@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   Chevalier.h
  * Author: MouaHH
  *
@@ -13,7 +13,7 @@
 class Chevalier : public Unite
 {
     public:
-    Chevalier(vector<Case> ensCase, Joueur* j);
+    Chevalier(vector<Case *> ensCase, Joueur* j);
 };
 
 

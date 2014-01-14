@@ -28,3 +28,11 @@ Attaque::Attaque(int portee, int degat, int ptAction) {
 void Attaque::lancerAttaque(Case* c) {
     c->transmettreAttaque(m_Degat);
 }
+
+int Attaque::getDegat() {
+    return m_Degat + m_Entite->getJoueur()->getListeBonusJoueur(3);
+}
+
+int Attaque::getPortee() {
+    return m_Portee + m_Entite->getJoueur()->getListeBonusJoueur(4);
+}

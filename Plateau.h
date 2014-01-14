@@ -12,7 +12,7 @@ using namespace std;
 class Plateau {
 private :
         int m_largeur;
-        int m_longeur;
+        int m_longueur;
         Case*** plateau;
 
         vector<Batiment *> v_Batiment;
@@ -25,9 +25,10 @@ public :
         // retourne null si pas d'unite ou si c'est un batiment
         inline Case * getCase(int x, int y) { return plateau[x][y]; }
         inline void ajoutBatiment(Batiment * bat) { v_Batiment.push_back(bat); }
+        bool isFini(ifstream& fichier);
 
         inline int getLargeur() { return m_largeur; }
-        inline int getLongeur() { return m_longeur; }
+        inline int getLongeur() { return m_longueur; }
 };
 
 #endif

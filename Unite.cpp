@@ -1,7 +1,7 @@
 #include "Unite.h"
 #include "ListeException.h"
 #include <exception>
-Unite::Unite(unsigned int mvt, unsigned int ct, unsigned int pop, int vieMax, int vieMin, vector<Case> ensCase, Joueur* j, string nom)
+Unite::Unite(unsigned int mvt, unsigned int ct, unsigned int pop, int vieMax, int vieMin, vector<Case *> ensCase, Joueur* j, string nom)
 : Entite(ensCase,j,nom,vieMin,vieMax) {
     this->setMouvement(mvt);
     this->setCout(ct);
@@ -37,7 +37,7 @@ Case Unite::deplacement(Case c) {
     if(dep < m_mouvement)
         return c;
     else
-        return m_position[0];
+        return *(m_position[0]);
 }
 
 void Unite::modifierVie(int vie) {
@@ -51,7 +51,7 @@ void Unite::attaquer(Case c, Attaque* attaque) {
         ManquePtAction ex;
         throw ex;
     }
-    Case cE = getPosition()[0];
+    Case cE = *(getPosition()[0]);
     if ((abs(c.getX() - cE.getX()) + abs(c.getY() - cE.getY())) <= attaque->getPortee()) {
         ManquePortee ex;
         throw ex;
@@ -64,7 +64,7 @@ void Unite::attaquer(Case c) {
         ManquePtAction ex;
         throw ex;
     }
-    Case cE = getPosition()[0];
+    Case cE = *(getPosition()[0]);
     if ((abs(c.getX() - cE.getX()) + abs(c.getY() - cE.getY())) <= m_AttaqueParDefaut->getPortee()) {
         ManquePortee ex;
         throw ex;
@@ -74,6 +74,10 @@ void Unite::attaquer(Case c) {
 
 Unite::~Unite() {
 
+}
+
+int Unite::getMouvement() {
+    return m_mouvement + getJoueur()->getListeBonusJoueur(5);
 }
 
 void Unite::initSort() {
