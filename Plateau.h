@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 
 #include "Case.h"
 #include "Entite.h"
@@ -16,8 +17,11 @@ private :
         Case*** plateau;
 
         vector<Batiment *> v_Batiment;
+
+        void lierBatiment(vector<Joueur *> joueurs,vector<Batiment *>v_chateau,vector<Batiment *>v_tour,int nbTour);
+        bool testTour(Batiment * c, Batiment * t,vector<Batiment *>v_t);
 public :
-        Plateau(string nomFichier="plateau1.data");
+        Plateau(vector<Joueur *> joueurs,string nomFichier="plateau1.data");
         void setPlateau();
         ~Plateau();
 

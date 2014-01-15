@@ -5,9 +5,9 @@ using namespace std;
 
 int main(int argc, char** argv) {
 
-/*    Jeux jeux = new Jeux(2,"Plateau.txt");
+    Jeux * jeux = new Jeux(2,"Plateau.txt");
     jeux->partieConsole();
-    delete jeux;*/
+    delete jeux;
 
     return 0;
 }

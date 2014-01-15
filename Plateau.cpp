@@ -9,7 +9,7 @@
 
 
 
-Plateau::Plateau(string nomPlateau) : v_Batiment() {
+Plateau::Plateau(vector<Joueur *> joueurs,string nomPlateau) : v_Batiment() {
     int nbrChateau = 0;
 
     ifstream fichierPlateau;
@@ -28,6 +28,11 @@ Plateau::Plateau(string nomPlateau) : v_Batiment() {
             plateau[i][j] = new Case(i,j);
         }
     }
+
+    vector<Batiment *> v_chateau;
+    vector<Batiment *> v_tour;
+    int nbT = 0;
+    int nbC = 0;
 
     while (!isFini(fichierPlateau)) {
         int x,y,taille;
@@ -49,15 +54,16 @@ Plateau::Plateau(string nomPlateau) : v_Batiment() {
                     switch (type) {
                         case chateau : {
                             bat = new Chateau(cases,"Chateau");
-                            /*if (joueurs.size < nbrChateau)
-                                joueurs[nbrChateau]->lierChateau(bat);
-                            nbrChateau++;*/
+                            v_chateau.push_back(bat);
                             plateau[x+i][y+j]->setOccupant(bat);
+                            nbT++;
                             break;
                         }
                         case tour : {
                             bat = new Tour(cases,"Tour");
+                            v_tour.push_back(bat);
                             plateau[x+i][y+j]->setOccupant(bat);
+                            nbC++;
                             break;
                         }
                     }
@@ -66,6 +72,7 @@ Plateau::Plateau(string nomPlateau) : v_Batiment() {
             v_Batiment.push_back(bat);
       }
       fichierPlateau.close();
+      lierBatiment(joueurs,v_chateau,v_tour,(nbT/nbC));
 }
 
 bool Plateau::isFini(ifstream& fichier) {
@@ -77,6 +84,39 @@ bool Plateau::isFini(ifstream& fichier) {
 
 void Plateau::setPlateau() {
     cout << "";
+}
+
+void Plateau::lierBatiment(vector<Joueur *>joueurs,vector<Batiment *>v_chateau,vector<Batiment *>v_tour,int nbTour) {
+    vector<Batiment *>v_tourJoueur;
+    for(int i = 0; i < joueurs.size(); i++) {
+        std::vector<Batiment *>::iterator it (v_tour.begin()), itend(v_tour.end());
+        int j = 0;
+        for(;it!=itend;++j) {
+            if (v_tourJoueur.size() < nbTour)
+                v_tourJoueur.push_back(v_tour[j]);
+            else
+                if (testTour(v_chateau[i],v_tour[j],v_tourJoueur))
+                    v_tour.erase(it);
+            j++;
+        }
+    }
+}
+
+bool Plateau::testTour(Batiment * c, Batiment * t,vector<Batiment *>v_tJ) {
+    int k = 0;
+    bool nonTrouve = true;
+    int posT = abs((t->getPosition()[0]->getX() + t->getPosition()[0]->getY()) - (c->getPosition()[0]->getX() + c->getPosition()[0]->getY()));
+    std::vector<Batiment *>::iterator it2 (v_tJ.begin());
+    while(k < v_tJ.size() || nonTrouve) {
+        if (posT < abs(v_tJ[k]->getPosition()[0]->getX() + v_tJ[k]->getPosition()[0]->getY())) {
+            v_tJ.erase(it2);
+            v_tJ.push_back(t);
+            nonTrouve = false;
+        }
+        ++it2;
+        k++;
+    }
+    return !(nonTrouve);
 }
 
 Plateau::~Plateau() {
