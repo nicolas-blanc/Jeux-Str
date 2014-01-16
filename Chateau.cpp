@@ -46,7 +46,7 @@ void Chateau::Invoquer(int unite, Case c)
             break;}
     }
 
-    if(this->getJoueur()->getPopulation() >= u->getPopulation() || this->getJoueur()->getPtAction() >= u->getCout())
+    if(this->getJoueur()->getPopulation()+u->getPopulation() <= u->getPopulation() || this->getJoueur()->getPtAction() >= u->getCout())
     {
         getJoueur()->setUnite(u);
         this->getJoueur()->modifPopulation(u->getPopulation());

@@ -22,7 +22,9 @@ public :
     inline int getPtAction() { return m_PtActionJoueur; }
     inline int getPopulation() { return m_Population; }
     inline int getPtActionMax() { return m_PtActionMax + m_listeBonusJoueur[1]; }
-    inline int getPopMax() { return m_PopMax + m_listeBonusJoueur[0]; }
+    inline void setPtActionMax(int pt) {m_PtActionMax = pt;}
+    inline int getPopulationMax() { return m_PopulationMax + m_listeBonusJoueur[0]; }
+    inline void setPopulationMax(int pop) { m_PopulationMax=pop;}
     inline vector<int> getListeBonusJoueur() { return m_listeBonusJoueur; }
     inline int getListeBonusJoueur(int val) { return m_listeBonusJoueur[val]; }
     inline Batiment* getBatiment(string nomBatiment) { return v_Batiment[nomBatiment]; }
@@ -30,9 +32,9 @@ public :
     inline void modifPtAction(int val) { m_PtActionJoueur = m_PtActionJoueur-val; }
     inline void modifPopulation(int val) { m_Population = m_Population-val; }
 
-    inline void setPtAction(int val) { if (val < getPtActionMax() || val > 0) m_PtActionJoueur = val; else { PtAction ex; throw ex; } }
+    inline void setPtAction(int val) { if (val <= getPtActionMax() || val > 0) m_PtActionJoueur = val; else { PtAction ex; throw ex; } }
     inline void setListeBonusJoueur(int indice, int bonus) { m_listeBonusJoueur[indice] = bonus; }
-    inline void setPopulation(int val) { if (val < getPopMax() || val > 0) m_Population = val; else { Population ex; throw ex; } }
+    inline void setPopulation(int val) { if (val <= getPopulationMax() || val > 0) m_Population = val; else { Population ex; throw ex; } }
 
     void setBatiment(Batiment * batiment);
     void setUnite(Unite * unite);
@@ -49,7 +51,7 @@ private :
     map<string, Batiment* > v_Batiment;
     int m_PtActionMax;
     int m_PtActionJoueur;
-    int m_PopMax;
+    int m_PopulationMax;
     int m_Population;
     vector<int> m_listeBonusJoueur;
     // Vecteur des bonus pour le joueur

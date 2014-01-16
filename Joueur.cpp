@@ -8,6 +8,9 @@ Joueur::Joueur(int couleur, int numero) {
         m_listeBonusJoueur[i] = 0;
 
     setPtAction(0);
+    setPopulationMax(10);
+    setPopulation(0);
+    setPtActionMax(0);
 }
 
 Joueur::~Joueur() {
