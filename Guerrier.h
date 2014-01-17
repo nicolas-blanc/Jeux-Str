@@ -9,6 +9,7 @@ class Guerrier : public Unite {
 public:
     Guerrier(vector<Case *> ensCase, Joueur* j);
     virtual ~Guerrier();
+    void dessinerEntite();
 private:
 
 };

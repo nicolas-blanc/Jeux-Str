@@ -4,3 +4,7 @@ Chevalier::Chevalier(vector<Case *> ensCase, Joueur* j) : Unite(5,2,1,5,0,ensCas
 {
 
 }
+
+void Chevalier::dessinerEntite() {
+    cout << " Ch|";
+}

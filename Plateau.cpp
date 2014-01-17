@@ -1,16 +1,7 @@
 #include "Plateau.h"
-#include "Batiment.h"
-#include "Tour.h"
-#include "Chateau.h"
-#include "enumerations.h"
-#include <iostream>
-#include <fstream>
-#include <cstdlib>
-
-
 
 Plateau::Plateau(vector<Joueur *> joueurs,string nomPlateau) : v_Batiment() {
-    int nbrChateau = 0;
+    stringstream out;
 
     ifstream fichierPlateau;
     fichierPlateau.open(nomPlateau.c_str(), ios::in | ios::binary);
@@ -29,15 +20,15 @@ Plateau::Plateau(vector<Joueur *> joueurs,string nomPlateau) : v_Batiment() {
         }
     }
 
-    vector<Batiment *> v_chateau;
-    vector<Batiment *> v_tour;
-    int nbT = 0;
-    int nbC = 0;
-
     while (!isFini(fichierPlateau)) {
-        int x,y,taille;
+        int joueur,x,y,taille;
+        int jTaille = joueurs.size();
+        vector<int> nbT(jTaille,0);
+        int nbCa = 0;
+        int nbV = 0;
         catBatiments type;
             fichierPlateau.read((char*)&type, sizeof(catBatiments));
+            fichierPlateau.read((char*)&joueur, sizeof(int));
             fichierPlateau.read((char*)&taille, sizeof(int));
             fichierPlateau.read((char*)&x, sizeof(int));
             fichierPlateau.read((char*)&y, sizeof(int));
@@ -48,31 +39,45 @@ Plateau::Plateau(vector<Joueur *> joueurs,string nomPlateau) : v_Batiment() {
             }
 
             Batiment* bat;
-
+            switch (type) {
+                case chateau : {
+                    if(joueur < jTaille)
+                        bat = new Chateau(cases,joueurs[joueur],"Chateau");
+                    else
+                        bat = new Chateau(cases,"Chateau");
+                    break;
+                }
+                case tour : {
+                    if(joueur < jTaille) {
+                        nbT[joueur]++;
+                        out << nbT[joueur];
+                        bat = new Chateau(cases,joueurs[joueur],"Tour" + out.str());
+                    } else
+                        bat = new Tour(cases,"Tour" + out.str());
+                    break;
+                }
+                case campement : {
+                    nbCa++;
+                    out << nbCa;
+                    break;
+                }
+                case village : {
+                    nbV++;
+                    out << nbV;
+                    break;
+                }
+                case magie : {
+                    break;
+                }
+            }
             for (int i=0; i<taille; i++) {
                 for (int j=0; j<taille; j++) {
-                    switch (type) {
-                        case chateau : {
-                            bat = new Chateau(cases,"Chateau");
-                            v_chateau.push_back(bat);
-                            plateau[x+i][y+j]->setOccupant(bat);
-                            nbT++;
-                            break;
-                        }
-                        case tour : {
-                            bat = new Tour(cases,"Tour");
-                            v_tour.push_back(bat);
-                            plateau[x+i][y+j]->setOccupant(bat);
-                            nbC++;
-                            break;
-                        }
-                    }
+                    plateau[x+i][y+j]->setOccupant(bat);
                 }
             }
             v_Batiment.push_back(bat);
       }
       fichierPlateau.close();
-      lierBatiment(joueurs,v_chateau,v_tour,(nbT/nbC));
 }
 
 bool Plateau::isFini(ifstream& fichier) {

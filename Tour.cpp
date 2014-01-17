@@ -4,9 +4,12 @@
 Tour::Tour(vector<Case *> ensCase, string nom)
 : Batiment(ensCase, nom, 0, 10),
 m_attaque(5)
-{
-    getJoueur()->setBatiment(this);
-}
+{}
+
+Tour::Tour(vector<Case *> ensCase,Joueur * j, string nom)
+: Batiment(ensCase, nom, 0, 10),
+m_attaque(5)
+{}
 
 void Tour::attaquer(Case * c) {
     getAttaque().lancerAttaque(c);
@@ -51,4 +54,8 @@ void Tour::attaqueAuto()
     }
 
     attaquer(danger_entite->getPosition()[0]);
+}
+
+void Tour::dessinerEntite() {
+    cout << " T |";
 }

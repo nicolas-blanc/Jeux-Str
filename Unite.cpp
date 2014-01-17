@@ -84,4 +84,8 @@ void Unite::initSort() {
 
 }
 
+void Unite::dessinerEntite() {
+    cout << " U |";
+}
+
 //Penser � supprimer l'effet quand il arrive � 0 tours

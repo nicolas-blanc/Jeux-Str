@@ -1,12 +1,19 @@
 #ifndef PLATEAU_H
 #define PLATEAU_H
 
+#include <sstream>
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
+#include <cstdlib>
 
 #include "Case.h"
 #include "Entite.h"
+#include "Batiment.h"
+#include "Tour.h"
+#include "Chateau.h"
+#include "enumerations.h"
 
 using namespace std;
 

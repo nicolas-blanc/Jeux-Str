@@ -1,6 +1,6 @@
 #include "BatimentBonusStat.h"
 
-BatimentBonusStat::BatimentBonusStat(vector<Case *> ensCase, Joueur j, string nom, int stat) : Batiment(ensCase, j, nom, -1, -1) {
+BatimentBonusStat::BatimentBonusStat(vector<Case *> ensCase, string nom, int stat) : Batiment(ensCase, nom, -1, -1) {
     setStat(stat);
     setBonus(0);
     setNbTours(0);

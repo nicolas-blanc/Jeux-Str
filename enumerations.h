@@ -1,4 +1,4 @@
-/* 
+/*
  * File:   enumerations.h
  * Author: HolyPony
  *
@@ -8,7 +8,7 @@
 #ifndef ENUMERATIONS_H
 #define	ENUMERATIONS_H
 
-enum catBatiments {chateau, tour};
+enum catBatiments {chateau, tour, campement, village, magie};
 enum catUnite {guerrier, chevalier, voleur, magicien, pretre, archer};
 
 #endif	/* ENUMERATIONS_H */

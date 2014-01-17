@@ -39,6 +39,8 @@ class Unite : public Entite {
         inline void insererEffet(Effet* effet) { this->v_effet.push_back(effet); };
         void enleverEffet(Effet* effet);
 
+        void dessinerEntite();
+
     protected:
         string m_nom;
         unsigned int m_mouvement;

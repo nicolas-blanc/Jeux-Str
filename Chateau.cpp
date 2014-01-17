@@ -1,10 +1,13 @@
 #include "Chateau.h"
 #include <math.h>
 
+Chateau::Chateau(vector<Case *> EnsCase,Joueur * j, string nom) : Batiment(EnsCase, j, nom, 0, 20)
+{}
+
 Chateau::Chateau(vector<Case *> EnsCase, string nom) : Batiment(EnsCase, nom, 0, 20)
 {}
 
-void Chateau::Invoquer(int unite, Case c)
+void Chateau::Invoquer(int unite, Case * c)
 {
     float distance;
     bool invoc_possible = false;
@@ -13,15 +16,15 @@ void Chateau::Invoquer(int unite, Case c)
         for(int y = 0; y<4; y++)
         {
          distance = sqrt(((this->getPosition()[x]->getX()
-                -c.getX())^2)+
+                -c->getX())^2)+
                 ((this->getPosition()[y]->getY()
-                -c.getY())^2));
-         if((distance == 1.0 || distance == sqrt(2)) && !c.isOccupee())
+                -c->getY())^2));
+         if((distance == 1.0 || distance == sqrt(2)) && !c->isOccupee())
              invoc_possible = true;
         }
     }
     vector<Case *> ensCase;
-    ensCase.push_back(&c);
+    ensCase.push_back(c);
     Unite* u;
 
     switch(unite)
@@ -62,4 +65,8 @@ void Chateau::Invoquer(int unite, Case c)
     }
 
 
+}
+
+void Chateau::dessinerEntite() {
+    cout << " C |";
 }

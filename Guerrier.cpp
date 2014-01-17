@@ -8,3 +8,6 @@ Guerrier::Guerrier(vector<Case *> ensCase, Joueur* j)
 Guerrier::~Guerrier() {
 }
 
+void Guerrier::dessinerEntite() {
+    cout << " G |";
+}

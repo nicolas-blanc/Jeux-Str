@@ -54,13 +54,13 @@ void Jeux::partieConsole() {
                 int unit = 0;
                 cout << "1. Guerrier  2. Chevalier  3. Archer  4. Voleur  5. Pretre  6. Mage  7.Annuler" << endl;
                 cin >> unit;
-                cout << "Donnez la coordonn2e X autour de votre Chateau" << endl;
+                cout << "Donnez la coordonnee X autour de votre Chateau" << endl;
                 cin >> x;
-                cout << "Donnez la coordonn2e Y autour de votre Chateau" << endl;
+                cout << "Donnez la coordonnee Y autour de votre Chateau" << endl;
                 cin >> y;
                 if (unit > 0 && unit < 7) {
                     try {
-                        ((Chateau*)m_Joueur[(m_nbTour%m_nbJoueur)]->getBatiment("Chateau"))->Invoquer(unit,*m_Plateau->getCase(x,y)); // a rajouter a plateau => Case * getCase(int x, int y);
+                        ((Chateau*)m_Joueur[(m_nbTour%m_nbJoueur)]->getBatiment("Chateau"))->Invoquer(unit,m_Plateau->getCase(x,y)); // a rajouter a plateau => Case * getCase(int x, int y);
                         afficherGraphiqueConsole();
                     } catch(ManquePopulation mP) { cout << "Vous n'avez pas assez de points de population" << endl;}
                 }
